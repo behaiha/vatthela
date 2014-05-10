@@ -1,11 +1,6 @@
 <?php
 
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
-
-// This is the main Web application configuration. Any writable
-// CWebApplication properties can be configured here.
-return array(
+$t = array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>APP_NAME,
     'theme'=>'classic',
@@ -27,12 +22,7 @@ return array(
         'Services',
         'Menu', 
 		// uncomment the following to enable the Gii tool
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'123456',
-			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
-		),
+		
 		
 	),
 
@@ -100,3 +90,16 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 	),
 );
+$gii = array();
+if (YII_GII_CONFIG == 'on') {
+	$t['modules']['gii'] = array(
+			'class'=>'system.gii.GiiModule',
+			'password'=>'123456',
+			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'ipFilters'=>array('127.0.0.1','::1'),
+		);
+	// array_push($t['modules'], $gii);
+}
+
+var_dump($t['modules']);
+return $t;
