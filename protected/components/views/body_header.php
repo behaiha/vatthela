@@ -1,6 +1,10 @@
 <header>
 	<div class="wrapper cf">
-		
+		<?php
+            foreach($model as $row){
+                //echo Slideshow::model()->getImageSlide($row);
+            }
+        ?>
 		<div id="logo">
 			<a href="index.html"><img  src="<?php echo Yii::app()->theme->baseUrl; ?>/img/logo.png" alt="Simpler"></a>
 		</div>
@@ -32,8 +36,9 @@
 			<!-- slider content --> 
 			<div class="main-slider-content" >
 			<ul class="sliders-wrap-inner">
+                <?php foreach($model as $row):?>
 			    <li>
-			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/01.jpg" title="" alt="alt" />           
+			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/01.jpg" title="" alt="alt" />          
 			          <div class="slider-description">
 			            <h4>Lorem ipsum dolor</h4>
 			            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
@@ -41,67 +46,7 @@
 			            </p>
 			         </div>
 			    </li>
-			    
-			    <li>
-			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/02.jpg" title="" alt="alt" />           
-			          <div class="slider-description">
-			            <h4>Lorem ipsum dolor</h4>
-			            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
-			            <a class="link" href="#">Read more </a>
-			            </p>
-			         </div>
-			    </li>
-			    
-			    <li>
-			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/03.jpg" title="" alt="alt" />           
-			          <div class="slider-description">
-			            <h4>Lorem ipsum dolor</h4>
-			            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
-			            <a class="link" href="#">Read more </a>
-			            </p>
-			         </div>
-			    </li>
-			    
-			    <li>
-			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/04.jpg" title="" alt="alt" />           
-			          <div class="slider-description">
-			            <h4>Lorem ipsum dolor</h4>
-			            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
-			            <a class="link" href="#">Read more </a>
-			            </p>
-			         </div>
-			    </li>
-			    
-			    <li>
-			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/05.jpg" title="" alt="alt" />           
-			          <div class="slider-description">
-			            <h4>Lorem ipsum dolor</h4>
-			            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
-			            <a class="link" href="#">Read more </a>
-			            </p>
-			         </div>
-			    </li>
-			    
-			    <li>
-			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/06.jpg" title="" alt="alt" />           
-			          <div class="slider-description">
-			            <h4>Lorem ipsum dolor</h4>
-			            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
-			            <a class="link" href="#">Read more </a>
-			            </p>
-			         </div>
-			    </li>
-			    
-			    <li>
-			          <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/dummies/slides/07.jpg" title="" alt="alt" />           
-			          <div class="slider-description">
-			            <h4>Lorem ipsum dolor</h4>
-			            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
-			            <a class="link" href="#">Read more </a>
-			            </p>
-			         </div>
-			    </li>
-			    
+			    <?php endforeach;?>
 			  </ul>  	
 			</div>
 			<!-- ENDS slider content --> 
@@ -129,10 +74,5 @@
 		          
 		 </div> 
 		<!-- ENDS SLIDER -->
-
-
-
-
-
 	</div>
 </header>

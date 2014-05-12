@@ -86,7 +86,7 @@ class Slideshow extends CActiveRecord
 	}
     public function getImageSlide($model){
         if($model->image != ''){
-            return CHtml::image(Yii::app()->request->baseUrl.'/'.SLIDE_SHOW.$model->image,'',array('style'=>'width:200px;','id'=>'image'));
+            return '<img src="'.Yii::app()->theme->baseUrl.SLIDE_SHOW.'/img/dummies/slides/01.jpg" title="" alt="alt" />';
         }else{
             return "Không có";
         }

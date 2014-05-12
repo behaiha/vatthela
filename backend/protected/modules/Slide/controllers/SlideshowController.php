@@ -59,7 +59,7 @@ class SlideshowController extends Controller
                     $model->alt = str_replace($typefile,'',$data[$key]['image']);
                     if($model->save(false)){
                         $image_thumbai = Yii::app()->image->load(Yii::app()->basePath .'/../'.TEMP_IMAGE.$data[$key]['image']);
-                        $image_thumbai->resize(567,350,Image::NONE);
+                        $image_thumbai->resize(940,367,Image::NONE);
                         $image_thumbai->save(Yii::getPathOfAlias('webroot').'/'.SLIDE_SHOW.$data[$key]['image']);
                     }
                 }else{
