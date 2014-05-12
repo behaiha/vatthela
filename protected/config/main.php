@@ -6,7 +6,7 @@ $t = array(
     'theme'=>'classic',
 	// preloading 'log' component
 	'preload'=>array('log'),
-    // 'defaultController' => 'Users/default/login',
+    'defaultController' => 'Home/default/index',
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
