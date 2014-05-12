@@ -27,8 +27,6 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// $model = Users::model()->findAll();
-		echo DB_USER;
 		$this->render('index');
 	}
 

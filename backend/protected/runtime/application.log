@@ -5144,3 +5144,19 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/vatthela/backend/index.php?r=gii
 ---
+2014/05/10 09:54:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela\backend\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela/backend/index.php?r=gii
+---
+2014/05/10 09:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela\backend\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela/backend/index.php?r=gii
+---
