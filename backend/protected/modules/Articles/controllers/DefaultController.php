@@ -234,6 +234,7 @@ class DefaultController extends Controller
 	{
 		//echo "abc";
 		$model=new Articles('search');
+		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Articles']))
 			$model->attributes=$_GET['Articles'];
 
