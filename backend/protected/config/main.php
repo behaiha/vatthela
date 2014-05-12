@@ -100,6 +100,4 @@ if (YII_GII_CONFIG == 'on') {
 		);
 	// array_push($t['modules'], $gii);
 }
-
-var_dump($t['modules']);
 return $t;

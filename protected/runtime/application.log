@@ -151,3 +151,16 @@ Stack trace:
 REQUEST_URI=/vatthela/
 in C:\xampp\htdocs\vatthela\protected\controllers\SiteController.php (31)
 in C:\xampp\htdocs\vatthela\index.php (14)
+2014/05/12 13:44:03 [error] [exception.CException] exception 'CException' with message 'Alias "Users.UsersModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\vatthela\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\YiiBase.php(196): YiiBase::import('Users.UsersModu...', true)
+#1 C:\xampp\htdocs\vatthela\framework\base\CModule.php(282): YiiBase::createComponent('Users.UsersModu...', 'Users', NULL, Array)
+#2 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(337): CModule->getModule('Users')
+#3 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(276): CWebApplication->createController('')
+#4 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#5 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\vatthela\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/vatthela/
+HTTP_REFERER=http://localhost/
+---
