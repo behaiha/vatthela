@@ -1,11 +1,10 @@
-<div id="filter-container" class="cf" style="overflow:none ;">
+<div id="filter-container" class="cf">
     <?php 
         foreach ($model as $value) { 
-        	// $value->title ="Sự thật lịch sử về biểu tượng ".$value->id;
-        	// $value->save(false);
             $this->widget('Articles.components.Index_One_Articles',array('value'=>$value));
         }
     ?>       
+
 </div><!-- ENDS Filter container -->
 <style type="text/css">
 	#filter-container{
@@ -27,6 +26,7 @@
                   success: function(data){
                   	// count = parseInt($('#hiddenaddA').val()) +  1;
                     // $('#hiddenaddA').val(count);
+                    // $('#filter-container').append('<div style="clear:both;"></div>');
                     $('#filter-container').append(data);
                   },
           		});
