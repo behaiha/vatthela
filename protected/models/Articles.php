@@ -56,8 +56,8 @@ class Articles extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'categories' =>array(self::HAS_MANY,'CategoryRelation','table_id','on'=>"table_name='A'"),
-
+            'relations' =>array(self::HAS_MANY,'CategoryRelation','table_id','on'=>"table_name='A'"),
+            'categories' =>array(self::MANY_MANY,'Categories','category_relation(table_id,category_id)'),
 		);
 	}
 	/**
@@ -151,9 +151,10 @@ class Articles extends CActiveRecord
         }
     }
     
-    public function getImage($model){
+    public static function getImage($model){
         if($model->image != '' and $model->path != ''){
-            return CHtml::image(Yii::app()->request->baseUrl.'/'.$model->path.'thumbai_100/'.$model->image,'',array('style'=>'width:100px'));
+        	// return Yii::app()->request->baseUrl;
+        	return '<img src="'. Yii::app()->theme->baseUrl.'/../'.$model->path.'thumbai_300/'.$model->image.'" alt="alt" />';
         }else{
             return "Không có";
         }

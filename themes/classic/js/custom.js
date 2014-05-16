@@ -233,7 +233,6 @@ jQuery(document).ready(function($) {
 		$container.isotope('reLayout');
 
 	}).trigger("resize");
-	
 		
 });//close	
 

@@ -1,0 +1,1 @@
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/scrollpagination.js"></script>

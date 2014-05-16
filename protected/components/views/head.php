@@ -10,7 +10,7 @@
 	<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->		
 			
 	<!-- JS -->
-	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
+	<?php Yii::app()->clientScript->registerCoreScript('jquery');?>
 	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/custom.js"></script>
 	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/tabs.js"></script>
 	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/css3-mediaqueries.js"></script>
