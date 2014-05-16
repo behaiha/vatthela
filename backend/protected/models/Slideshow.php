@@ -84,13 +84,7 @@ class Slideshow extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-    public function getImageSlide($model){
-        if($model->image != ''){
-            return '<img src="'.Yii::app()->theme->baseUrl.SLIDE_SHOW.'/img/dummies/slides/01.jpg" title="" alt="alt" />';
-        }else{
-            return "Không có";
-        }
-    }
+    
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

@@ -68,5 +68,7 @@
 	<!-- flexslider -->
 	<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/flexslider.css" >
 	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.flexslider.js"></script>
-
+    
+    <!--CSS FOR MINH TIEN-->
+    <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/minhtien.css" >
 </head>

@@ -43,6 +43,7 @@ class Slideshow extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'cate'=>array(self::BELONGS_TO,'Categories','category_id'),
 		);
 	}
 
