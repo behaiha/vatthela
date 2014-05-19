@@ -10,4 +10,12 @@ class DefaultController extends Controller
     	$model = Articles::model()->findAll($criteria);
         $this->renderPartial('load',array('model'=>$model));
 	}
+    
+    /**
+    By Trai Ngèo @2014
+    **/
+    public function actionView(){
+        $this->layout="//layouts/view";
+        $this->render('view');        
+    } 
 }
