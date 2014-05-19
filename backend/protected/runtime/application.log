@@ -5292,3 +5292,27 @@ in C:\xampp\htdocs\vatthela\backend\index.php (24)
 2014/05/14 04:22:18 [warning] [application] Failed to set unsafe attribute "description" of "Articles".
 in C:\xampp\htdocs\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (137)
 in C:\xampp\htdocs\vatthela\backend\index.php (24)
+2014/05/19 09:47:14 [warning] [application] Failed to set unsafe attribute "image" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/05/19 09:47:14 [warning] [application] Failed to set unsafe attribute "hot" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/05/19 09:47:14 [warning] [application] Failed to set unsafe attribute "endhot_date" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/05/19 09:47:14 [warning] [application] Failed to set unsafe attribute "description" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/05/19 09:48:14 [warning] [application] Failed to set unsafe attribute "image" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (137)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/05/19 09:48:14 [warning] [application] Failed to set unsafe attribute "hot" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (137)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/05/19 09:48:14 [warning] [application] Failed to set unsafe attribute "endhot_date" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (137)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/05/19 09:48:14 [warning] [application] Failed to set unsafe attribute "description" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (137)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
