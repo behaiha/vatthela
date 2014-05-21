@@ -5,7 +5,7 @@
 	</li>
 	
 	<?php foreach($model as $value): 
-		$filter = '.cate'.$value->id;
+		$filter = '.'.FIGURE_NAME.$value->id;
 	?>
 		<li>
 			<a class="a-category-index" href="#" data-filter="<?php echo $filter; ?>"><?php echo $value->title; ?></a>

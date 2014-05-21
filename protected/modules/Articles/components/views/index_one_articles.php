@@ -1,4 +1,4 @@
-<figure class="<?php echo Articles::getNameFigure($value); ?>">
+<figure class="<?php echo Articles::getNameFigure($value).' '.FIGURE_NAME; ?>">
 	<a href="<?php echo Articles::getLinkArticles($value); ?>" class="thumb">
 		<?php echo Articles::getImage($value); ?>
 	</a>

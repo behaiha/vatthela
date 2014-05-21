@@ -150,7 +150,26 @@ class Articles extends CActiveRecord
             return "Không xác định";
         }
     }
-    
+    public static function getLinkArticles($value)
+    {
+    	if ($value !=null) {
+    		return Yii::app()->createUrl('/Articles/articles/view',array('id'=>$value->id,'title'=>$value->url));
+    	}else{
+    		return '';
+    	}
+    }
+    public static function getNameFigure($value)
+    {
+    	if ($value != null) {
+    		$filter ='';
+			foreach ($value->categories as $key ) {
+				$filter = ' '.FIGURE_NAME.$key->id;
+			}
+			return $filter;
+    	}else{
+    		return '';
+    	}
+    }
     public static function getImage($model){
         if($model->image != '' and $model->path != ''){
         	// return Yii::app()->request->baseUrl;
