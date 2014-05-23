@@ -4,6 +4,7 @@
 $_config = dirname(__FILE__).'/tat-config.php';
 $yii=dirname(__FILE__).'/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
+$globals=dirname(__FILE__).'/protected/config/globals.php';
 
 // remove the following lines when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',true);
@@ -15,4 +16,5 @@ define('FIGURE_NAME', 'cate');
 
 require_once($_config);
 require_once($yii);
+require_once($globals);
 Yii::createWebApplication($config)->run();

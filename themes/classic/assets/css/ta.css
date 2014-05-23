@@ -1,0 +1,579 @@
+@media (max-width: 320px) {
+	.flexslider .slider-title {position: relative;}
+}
+.chang-image {
+	position: absolute;
+	bottom: 2%;
+	right: 2%;
+	display: none;
+	background: rgba(0,0,0,0.8);
+}
+.delete-image{
+	background-color: rgb(147, 86, 86);
+	right: 20%;
+}
+.image-logo:hover .save-image{
+	display: block;
+}
+@media (max-width: 765px) {
+	.chang-image{bottom: 30%;}
+}
+
+.image-logo {display: block;overflow: hidden;margin: 0 auto;
+	position: relative;height: 385px;}
+.image-logo a img{width: 100%;}
+#login-3{
+	border-bottom: 1px solid #ddd;
+}
+/*login-header*/
+.login-header{
+	display: none;
+}
+.login-header>div{
+		display: inline-block; height: 42px;
+}
+.login-header>div>div, .login-header>div>button{
+		float: left; padding-right: 10px;
+}
+.login-header>div>button{height: 25px; padding: 4px 10px; margin: 19px 0 0;}
+.login-header div p{
+	margin-bottom: 0px;
+}
+.prl-header-logo{
+	float: left;
+}
+.login-header a:hover{
+	color: #fff;
+}
+.login-header label{
+	display: inline-block;
+	margin-right: 32px;
+}
+.submit-login{
+	padding: 4px 9px;
+	margin-bottom: 3px;
+}
+.input-login{
+	padding: 3px 9px !important;
+}
+.login-header{
+	margin-right: 9%;
+	float: right;
+	width: 456px;
+	padding-top: 5px;
+}
+.login-header p,.login-header label{color: #fff;}
+.login-header a{
+	margin-left: 20px;
+}
+#form-s-mix1{
+	margin: 0px;
+}
+@media (min-width: 1000px) {
+	.login-header{
+		display: block;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}	
+}
+@media (max-width: 1366px) {
+	.input-login{
+		padding: 3px 6px !important;
+	}	
+}
+/*login - view*/
+.login-submit{
+		padding: 3px 6px !important;
+		font-size: 11px !important;
+	}
+	.login h5{
+		font-weight: bold;
+		color: #000;
+		border-bottom: 1px solid #ddd;
+		font-family: Arial;
+	}
+	.row p,.row label,.row .input-login-view{
+		display: inline-block;
+	}
+	.row .input-login-view{
+		width: 45%;
+		padding: 5px;
+	}
+	.login-bottom,.login .errorMessage{margin-left: 73px;}
+	.login .errorMessage{
+		color: red;
+	}
+	.row p{
+		font-weight: bold;
+		margin-right: 10px;
+	}
+	.login{
+		width: 50%;
+		margin: 0px auto;
+		border: 1px solid #857D7D;
+		border-radius: 6px;
+		padding: 16px;
+	}
+	.login-main{
+		width: 100%;
+	}
+	.login .error .input-login{
+		margin-left: 75px;
+		padding: 0px 3px 5px;
+	}
+	.login .errorSummary ul li{
+		list-style: none;
+	}
+	p.label-input{
+		width: 12%;
+	}
+	.checkbox-login{
+		margin: 0px;
+	}
+	.login .errorSummary{
+		background: #ffebe8;
+		border: 1px solid #dd3c10;
+		margin-bottom: 12px;
+		padding: 6px 12px;
+	}
+	.login .errorSummary>p{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	/*view user*/
+	.user-info{
+		z-index: 100000;
+	position: absolute;
+	top: 0px;
+	right: 12%;
+	background: rgba(255,255,255,0.1);
+	margin: 3px;
+	height: 64px;
+	padding: 1px;
+	list-style: none;
+	/*overflow: hidden;*/
+}
+.avatar-user{
+	float: left;
+	border-radius: 50%;
+	max-width: 50%;
+	overflow: hidden;
+}
+.user-info-name p{
+	min-width: 133px;
+	color: #fff;
+}
+.user-info-name p:first-child{
+	min-width: 133px;
+	color: #aeb8c2;
+}
+.user-info-name{
+	float: left;
+	max-width: 50%;
+	margin: 7px 4px;
+	padding: 2px 0px 1px 0px;
+}
+.avatar-user img{
+	margin: 6px;
+	height: 51px;
+	border-radius: 100%;
+}
+.activity-user{
+	 float: left;
+    margin: 9px;
+    overflow: visible;
+    width: 51px;
+}
+.activity-user span.icon{
+	border-radius: 6px;
+	border: 2px solid rgba(146, 196, 186, 0.24);
+	background: url(images/down-user.png) center center no-repeat ;
+width: 33px;
+margin: 8px 10px;
+height: 37px;
+display: block;
+}
+.activity{
+	 background: none repeat scroll 0 0 #161515;
+    display: none;
+    float: right;
+    margin-right: -10px;
+    width: 269px;
+    z-index: 1000;
+}
+.activity li{
+	list-style: none;
+	margin: 1px 3px 2px;
+	border-bottom: 1px solid rgba(255,255,255,0.17);
+}
+.activity li:last-child{
+	border-bottom: none;
+}
+.activity li:hover{
+	background: rgba(224, 56, 77,0.9);
+}
+.activity li a{
+	color: #fff;
+	width: 100%;
+	margin: 8px;
+	display: inline-block;
+}
+.activity-user:hover ul.activity{
+	display: block;
+}
+#nav .nav-wrapper{
+	z-index: 100;
+}
+/*view thumbai user*/
+.avatar{
+	position: absolute;
+	bottom: 14px;
+	width: 21% !important;
+	left: 3%;
+	box-shadow: 1px 1px 10px rgba(255,255,255,0.5);
+	background: #fff;
+	padding: 3px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+.img-avatat{
+	position: relative;
+}
+.save-avatar{
+	position: absolute;
+	font-size: 11px;
+	bottom: 27px;
+	left: 4%;
+	display: none;
+	border-radius: 9px;
+	font-weight: bold;
+	background: rgba(0,0,0,0.7);
+}
+.img-avatat:hover .save-avatar{
+	display: block;
+}
+.name-user{
+	text-shadow: #000 0px 1px 0, #000 0 -1px;
+	position: absolute;
+	left: 199px;
+	bottom: 40px;
+	color: rgba(255,255,255,0.99);
+	font-weight: bold;
+	font-size: 30px;
+}
+/*post status  - view_post_status*/
+div.clr{
+	clear: both;
+}
+.status-post{
+	display: inline;
+	float: right;
+	margin: 4px;
+	position: relative;
+	padding: 2px 5px;
+}
+.types{
+	top: 30px;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0px 0px 8px;
+	padding: 3px;
+	width: 98px;
+	display: none;
+	left: 0px;
+}
+.status-post:hover{
+	background: #ddd;
+	box-shadow: 0px 0px 5px rgba(90, 84, 84, 0.57) inset;
+}
+.status-post i{
+	font-size: 14px !important;
+}
+.div-button{
+	line-height: 2;
+	background: #e9eaed;
+}
+.div-button i{
+	margin: 8px;
+	font-size: 23px;
+}
+.div-button button{
+	box-shadow: 0px 0px 10px saddlebrown;
+	float: right;
+	margin: 4px;
+}
+.user-span-3{
+	float: left;
+	margin-right: 15px;
+}
+.post-status-user textarea{
+	min-height: 0px;
+	resize:none;
+	overflow: hidden;
+}
+.post-status-user{
+	border: 1px solid rgba(39, 34, 34, 0.5);
+	border-radius: 0%;
+	margin-bottom: 15px;
+	/*overflow: hidden;*/
+}
+.post-status-user .input{
+	padding: 7px;
+}
+.hiddendiv{display: none;}
+/*view post */
+.content-post .prl-entry-content{
+	margin-bottom: -4px;
+}
+.content-post .user-activity{
+	margin-bottom: 3px;
+}
+.view-show-post{
+    width: 73%;
+}
+.comment .prl-entry-content{
+	position: relative;
+    float: right;
+	width: 90%;
+	margin-top: -5px;
+	padding: 0px 2px;
+}
+.comment .prl-entry-content:hover .edit-comment{
+	display: inline;
+}
+.comment .prl-entry-content p.content-status{
+    display: inline;
+}
+.p-show{
+    color: rgba(37, 37, 37, 0.38);
+}
+.p-username-show{
+    font-weight: bold;
+}
+.time-comment{
+    display: inline;
+}
+.comment{
+	border-bottom: 1px dotted #eee;
+    background: #e9eaed;
+	padding-top: 12px;
+	padding-left: 8px;
+}
+@media (max-width: 320px) {
+	.comment .prl-entry-content{ width: 76%;}
+}
+.content{
+	border: 1px solid #eee;
+	box-shadow: 0px 0px 1px;
+	margin-bottom: 20px;
+}
+div.post-status{
+	margin:5px;
+	padding: 7px;
+}
+.many-like p{
+	display: inline;
+}
+div.many-like{
+	border: 1px solid rgba(88, 87, 87, 0.07);
+	padding: 8px;
+}
+.post-status .user a.icon{
+	float: right;
+	background: url(images/down-user.png) center center no-repeat ;
+	width: 15px;
+	margin: 0px 10px;
+	height: 17px;
+	display: block;
+}
+.activity-post{
+	display: inline-block;
+	width: 100px;
+	border: 1px solid #eee;
+	padding: 2px;
+	position: absolute;
+	box-shadow: 0px 0px 10px;
+	right: 3px;
+	top: 15px;
+	display: none;
+	background: #fff;
+}
+.post-status .user{
+	position: relative;
+}
+.activity-post a{ 
+	display: block;
+	color: #000;
+}
+.post-user-activity{
+	padding: 8px;
+	border-top: 1px solid #eee;
+}
+.content-comment-post{
+	width: 95%;
+	float: left;
+}
+.edit-comment{
+	float: right;
+	margin: 2px 2px 0px;
+	display: none;
+	color: #000;
+}
+.comment .activity-post{
+	top:25px;
+}
+.user .user_avatar{
+	float: left; margin-right: 10px;
+}
+.content .user .user_avatar img{
+	width: 60px;
+}
+.comment .user .user_avatar img{
+	width: 40px;
+}
+.input-post-comment .user{
+
+}
+.input-post-comment .input{
+	float: left;
+	width: 89%;
+	padding-bottom: 10px;
+	padding-left: 6px;
+	margin-top: -1px;
+}
+.input-post-comment .input-comment{
+	padding: 13px 11px;
+}
+/*left slider barr*/
+.if-user {
+	font-size: 12px;
+	text-transform: none;
+	color: #999;
+}
+.user-prl{
+	color: red;
+}
+/*update status*/
+.cannel-update{
+	background-color: rgba(0,0,0,0.9);
+}
+.prl-entry-content .div-button button{
+	box-shadow: none !important;
+}
+.prl-entry-content .div-button{
+	background: #eee;
+	font-size: 12px;
+	line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

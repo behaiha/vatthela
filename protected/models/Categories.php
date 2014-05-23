@@ -59,33 +59,14 @@ class Categories extends CActiveRecord
 	{
 		if (isset($values)) {
 			foreach ($values as $key) {
-				$model = Categories::model()->findByPk($key);
-				$this->saveOneCategory($model,$id,$table);
-			}
-		}
-	}
-	public function checkExistCategory($value,$id,$tableName)
-	{
-		$model = CategoryRelation::model()->findAll("table_id = $id and table_name='$tableName' and category_id = $value");
-		if (count($model) == 0) {
-			return 1;
-		}
-		return 0;
-	}
-	public function saveOneCategory($key,$id,$tableName)
-	{
-		if ($key != null) {
-			if ($this->checkExistCategory($key->id,$id,$tableName) == 1) {
-				$value = new CategoryRelation;
-				$value->table_id = $id;
-				$value->table_name = $tableName;
-				$value->category_id = $key->id;
-				$value->save(false);
-			}
-			if ($key->parent != null) {
-				$this->saveOneCategory($key->parent,$id,$tableName);
-			}else{
-				return;
+				$model = CategoryRelation::model()->findAll("table_id = $id and table_name='$table' and category_id = $key");
+				if (count($model) == 0) {
+					$value = new CategoryRelation;
+					$value->table_id = $id;
+					$value->table_name = $table;
+					$value->category_id = $key;
+					$value->save();
+				}
 			}
 		}
 	}
@@ -98,17 +79,28 @@ class Categories extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'connects' =>array(self::HAS_MANY,'CategoryRelation','category_id'),
-            'parent'=> array(self::BELONGS_TO,'Categories','parent_id'),
-            'one_parent'=> array(self::HAS_ONE,'Categories','parent_id','condition'=>'one_parent.parent_id <> 0'),
-            'children' =>array(self::HAS_MANY,'Categories','parent_id'),
+            'parent'=> array(self::BELONGS_TO,'Categories','parent_id','condition'=>'t.parent_id <> 0'),
+            'children' =>array(self::HAS_MANY,'Categories','parent_id','order' =>'order_possition asc'),
+            'articles' =>array(self::MANY_MANY,'Articles','category_relation(category_id,table_id)','on'=>'table_name="A"','limit'=>5),
         );
 	}
+    
+    /**
+        Function get URL Categories
+    **/
+    public function getURL($model){
+        return Yii::app()->createUrl('Articles/Category/viewArticleOfCate',array('id'=>$model->id));
+    }
+    
+    /**
+        End Function get URL Categories
+    **/
 	public function getType($value)
 	{
 		if ($value->type == 'G') {
-			return "Game";
+			return "Không hiện";
 		}else{
-			return "Bài viết";
+			return "Hiện tại trang chủ tin tức";
 		}
 	}
 	/**
@@ -193,11 +185,12 @@ class Categories extends CActiveRecord
             $this->subDropDown($child->children,$space.'---');
         }
     }
+    
+    
     public function getName($id){
         $model = Categories::model()->findByPk($id);
         if($model===null){
             return "Không có";
-			//throw new CHttpException(404,'The requested page does not exist.');
         }else{
             return $model->title;
         }

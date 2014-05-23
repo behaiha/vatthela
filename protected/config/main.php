@@ -6,7 +6,7 @@ $t = array(
     'theme'=>'classic',
 	// preloading 'log' component
 	'preload'=>array('log'),
-    'defaultController' => 'Home/default/index',
+    'defaultController' => 'Articles/default/index',
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
@@ -16,6 +16,7 @@ $t = array(
 	'modules'=>array(
         'Home',
         'Articles',
+        'Users',
 		// uncomment the following to enable the Gii tool
 		
 		

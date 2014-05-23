@@ -87,7 +87,7 @@ class DefaultController extends Controller
                     checkdirectory(RAPE_DATE);
                     $image_thumbai->resize(100,100,Image::NONE);  
                     $image_thumbai->save(Yii::getPathOfAlias('webroot').'/'.RAPE_DATE.'thumbai_100/'. $image);              
-                    $image_thumbai->resize(400,300,Image::AUTO);
+                    $image_thumbai->resize(300,300,Image::AUTO);
                     $image_thumbai->save(Yii::getPathOfAlias('webroot').'/'.RAPE_DATE.'thumbai_300/'. $image);
                     $path = RAPE_DATE;
                     $model->path = $path;

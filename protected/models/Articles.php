@@ -44,7 +44,7 @@ class Articles extends CActiveRecord
 			array('seo_description', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title, hot, short_description, description, seo_title, seo_description, active, create_date, update_date, user_id', 'safe', 'on'=>'search'),
+			array('id, title, hot, type, short_description, description, seo_title, seo_description, active, create_date, update_date, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,8 +56,10 @@ class Articles extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'relations' =>array(self::HAS_MANY,'CategoryRelation','table_id','on'=>"table_name='A'"),
-            'categories' =>array(self::MANY_MANY,'Categories','category_relation(table_id,category_id)'),
+            'categories' =>array(self::HAS_MANY,'CategoryRelation','table_id','on'=>"table_name='A'"),
+            'articlefiles' =>array(self::HAS_MANY,'ArticleFile','article_id','order'=>'chapter asc'),
+            'articleimages' =>array(self::HAS_MANY,'ArticleImage','article_id','order'=>'id asc'),
+            'rates'=> array(self::HAS_MANY,'Rating','article_id'),
 		);
 	}
 	/**
@@ -100,6 +102,7 @@ class Articles extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
         $criteria->compare('hot',$this->hot,true);
+        $criteria->compare('type',$this->type,true);
 		$criteria->compare('short_description',$this->short_description,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('seo_title',$this->seo_title,true);
@@ -124,14 +127,46 @@ class Articles extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-    public function getTitle($id){
-        $model = Articles::model()->findByPk($id);
+    public function getTitle($model){
         if($model == null){
             return "Không có";
         }else{
             return $model->title;
         }
     }
+    
+    public function getThumIndex($model){
+        if($model->image != ""){
+            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image.'" alt="'.$model->title.'" width="260"/>';
+        }
+    }
+    
+    public function getThumListCate($model){
+        if($model->image != ""){
+            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image.'" alt="'.$model->title.'" width="260"/>';
+        }
+    }
+    
+    public function getThumIndexMax($model){
+        if($model->image != ""){
+            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image.'" alt="'.$model->title.'"/>';
+        }
+    }
+    public function getTitleURL($model){
+        if($model != null){
+            return Yii::app()->createUrl('Home/default/view',array('id'=>$model->id));
+        }
+    }
+    
+    public function getArticlenewURL(){
+        return Yii::app()->createUrl('Articles/default/articlesnew');
+    }
+    public function getDate($model){
+        if($model->create_date != ''){
+            return date('F j, Y, g:i a', strtotime ($model->create_date));
+        }
+    }
+    
     public function getActive($status){
         if($status == 1){
             return "Không sử dụng";
@@ -150,43 +185,18 @@ class Articles extends CActiveRecord
             return "Không xác định";
         }
     }
-    public static function getLinkArticles($value)
-    {
-    	if ($value !=null) {
-    		return Yii::app()->createUrl('/Articles/articles/view',array('id'=>$value->id,'title'=>$value->url));
-    	}else{
-    		return '';
-    	}
-    }
-    public static function getNameFigure($value)
-    {
-    	if ($value != null) {
-    		$filter ='';
-			foreach ($value->categories as $key ) {
-				$filter = ' '.FIGURE_NAME.$key->id;
-			}
-			return $filter;
-    	}else{
-    		return '';
-    	}
-    }
-    public static function getImage($model){
-        if($model->image != '' and $model->path != ''){
-        	// return Yii::app()->request->baseUrl;
-        	return '<img src="'. Yii::app()->theme->baseUrl.'/../'.$model->path.'thumbai_300/'.$model->image.'" alt="alt" />';
+    
+    public function getImageForSlideShow($model){
+        $model_image = ArticleImage::model()->findByAttributes(array('article_id'=>$model->id));
+        if($model_image['image'] != '' and $model_image['path'] != ''){
+             return CHtml::image(Yii::app()->request->baseUrl.'/'.formatPath($model_image['path']).$model_image['image'],$model_image['alt'],array('style'=>'width:537px; height : 400px','title'=>'#htmlcaption'.$model_image['article_id']));
         }else{
-            return "Không có";
+            if($model->image != '' and $model->path != ''){
+                return CHtml::image(Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image,$model->url,array('style'=>'width:537px; height : 400px','title'=>'#htmlcaption'.$model->id));
+            }
         }
     }
-    public function getImage2($id){
-        $model = Articles::model()->findByPk($id);
-        if($model->image != '' and $model->path != ''){
-            $image =  CHtml::image(Yii::app()->request->baseUrl.'/'.$model->path.'thumbai_100/'.$model->image,'',array('style'=>'width:100px'));
-            return CHtml::link($image, array('/Articles/default/view', 'id'=>$id));
-        }else{
-            return "Không có";
-        }
-    }
+    
     public function getCategory($model){
         $string = '';
         if($model->categories != null){
@@ -196,12 +206,6 @@ class Articles extends CActiveRecord
             }
         }
         return $string;
-    }
-    public function getImageSlide($model){
-        if($model->image != ''){
-            return CHtml::image(Yii::app()->request->baseUrl.'/'.$model->path.$model->image,'',array('style'=>'width:200px;','id'=>'image'));
-        }else{
-            return "Không có";
-        }
-    }
+    }  
+    
 }
