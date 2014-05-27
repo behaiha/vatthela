@@ -99,4 +99,19 @@ class CategoryRelation extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    
+    /**
+    By Trai Ngeo @2014
+    */
+    public function getCategoryId($model,$type){
+        $criteria = new CDbCriteria;
+        $criteria->condition='table_id='.$model->id.' and table_name='.'"'.$type.'"';
+        $cate_re = CategoryRelation::model()->findAll($criteria);
+        $arr = array();
+        foreach($cate_re as $key=>$row){
+            $arr[$key] = $row->category_id;
+        }
+        return $arr;
+    }
 }

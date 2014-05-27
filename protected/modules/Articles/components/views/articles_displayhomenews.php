@@ -9,7 +9,7 @@
     					<article class="prl-article">
     						<a class="prl-thumbnail" href="<?php echo Articles::model()->getTitleURL($row);?>">
     							<span class="prl-overlay">
-    								 <?php echo Articles::model()->getThumIndex($row);?>
+    								 <?php echo Articles::model()->getThumbai($row);?>
     							</span>
     						</a>
     					</article>

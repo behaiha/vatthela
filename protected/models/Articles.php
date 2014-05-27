@@ -60,6 +60,7 @@ class Articles extends CActiveRecord
             'articlefiles' =>array(self::HAS_MANY,'ArticleFile','article_id','order'=>'chapter asc'),
             'articleimages' =>array(self::HAS_MANY,'ArticleImage','article_id','order'=>'id asc'),
             'rates'=> array(self::HAS_MANY,'Rating','article_id'),
+            'tags' =>array(self::HAS_MANY,'TagConnect','table_id','on'=>"table_name='A'"),
 		);
 	}
 	/**
@@ -135,32 +136,39 @@ class Articles extends CActiveRecord
         }
     }
     
-    public function getThumIndex($model){
+    /**
+    By Trai Ngeo @2014
+    */
+    
+    public function getThumbai($model){
         if($model->image != ""){
-            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image.'" alt="'.$model->title.'" width="260"/>';
+            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image.'" alt="'.$model->url.'" width="260"/>';
         }
     }
     
-    public function getThumListCate($model){
+    public function getThumbaiSmall($model){
         if($model->image != ""){
-            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image.'" alt="'.$model->title.'" width="260"/>';
+            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_100/'.$model->image.'" alt="'.$model->url.'" width="60"/>';
         }
     }
     
-    public function getThumIndexMax($model){
-        if($model->image != ""){
-            return '<img src="'.Yii::app()->request->baseUrl.'/'.formatPath($model->path).'thumbai_300/'.$model->image.'" alt="'.$model->title.'"/>';
-        }
-    }
+    /**
+        Link URL cho một bài viết
+    **/
     public function getTitleURL($model){
         if($model != null){
-            return Yii::app()->createUrl('Home/default/view',array('id'=>$model->id));
+            return Yii::app()->createUrl('Articles/default/view',array('id'=>$model->id));
         }
     }
     
     public function getArticlenewURL(){
         return Yii::app()->createUrl('Articles/default/articlesnew');
     }
+    
+     public function getViewMostURL(){
+        return Yii::app()->createUrl('Articles/default/viewmost');
+    } 
+    
     public function getDate($model){
         if($model->create_date != ''){
             return date('F j, Y, g:i a', strtotime ($model->create_date));
@@ -185,6 +193,7 @@ class Articles extends CActiveRecord
             return "Không xác định";
         }
     }
+    
     
     public function getImageForSlideShow($model){
         $model_image = ArticleImage::model()->findByAttributes(array('article_id'=>$model->id));

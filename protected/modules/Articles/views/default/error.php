@@ -1,4 +1,4 @@
-<div id="primary-left">   
+<section id="main" class="prl-span-9">    
     <div class="container"> <!-- 404 Page -->
         <div class="page-404">
         	<h1>404</h1>
@@ -7,4 +7,4 @@
         	<p><a class="button" href="<?php echo Yii::app()->createUrl('Home/default/index');?>">Back to home</a></p>
         </div>
     </div>
-</div>
+</section>

@@ -31,46 +31,15 @@
 			</section>
 		</div>
 	</div>    
-
-	<div class="widget widget-recent-post prl-panel">
-		<h5 class="prl-block-title">Recent posts</h5>	
-
-		<ul class="prl-list prl-list-line">
-			<li>
-				<article class="clearfix">
-					<a href="single.php" class="prl-thumbnail"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/images/_small/1.jpg" width="60" height="60" alt="Praesent lectus orci"></a>
-					<div>
-					<h4><a href="single.php" title="">Nulla ullamcorper tellus suscipit quam tincidunt</a></h4>
-					<!--<span class="prl-article-meta prl-clearfix"><i class="fa fa-calendar-o"></i> Nov 13th, 2013</span>-->
-					</div>
-				</article>
-			</li>
-			<li>
-				<article class="clearfix">
-					<a href="single.php" class="prl-thumbnail"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/images/_small/2.jpg" width="60" height="60" alt="Praesent lectus orci"></a>
-					<div>
-					<h4><a href="single.php" title="">Pellentesque erat arcu, pulvinar vel varius blandit, pretium vel arcu</a></h4>
-					<!--<span class="prl-article-meta prl-clearfix"><i class="fa fa-calendar-o"></i> Nov 13th, 2013</span>-->
-					</div>
-				</article>
-			</li>
-			<li>
-				<article class="clearfix">
-					<a href="single.php" class="prl-thumbnail"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/images/_small/3.jpg" width="60" height="60" alt="Praesent lectus orci"></a>
-					<div>
-					<h4><a href="single.php" title="">Lorem ipsum dolor sit amet, consectetur</a></h4>
-					<!--<span class="prl-article-meta prl-clearfix"><i class="fa fa-calendar-o"></i> Nov 13th, 2013</span>-->
-					</div>
-				</article>
-			</li>
-		</ul>
-	</div>		
+    <!--Bài viết xem nhiều nhất-->
+	<?php $this->widget('Articles.Components.Articles_MostView');?>
+    <!--End bài viết xem nhiều nhất-->	
 	
 	
 	<div id="post-pic-widget" class="widget photos-widget prl-panel">	
 	<h5 class="prl-block-title">Article photos</h5>
 		<div class="pt-wrapper">
-			<div class="pt-inner prl-clearfix">
+			<div class="">
 				<a href="single.php" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/images/_small/1.jpg" alt="Lorem ipsum dolor sit amet" /></a>
 				<a href="single.php" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/images/_small/2.jpg" alt="Lorem ipsum dolor sit amet" /></a>
 				<a href="single.php" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/images/_small/3.jpg" alt="Lorem ipsum dolor sit amet" /></a>
@@ -146,52 +115,7 @@
 			</ul>
 		</div>
 	</div>
-	<div id="calendar-2" class="widget widget_calendar prl-panel">
-		<h5 class="prl-block-title">Calendar</h5>
-		<div id="calendar_wrap">
-				<table id="wp-calendar">
-				<caption>May 2013</caption>
-				<thead>
-					<tr>
-						<th scope="col" title="Monday">M</th>
-						<th scope="col" title="Tuesday">T</th>
-						<th scope="col" title="Wednesday">W</th>
-						<th scope="col" title="Thursday">T</th>
-						<th scope="col" title="Friday">F</th>
-						<th scope="col" title="Saturday">S</th>
-						<th scope="col" title="Sunday">S</th>
-					</tr>
-				</thead>
-
-				<tfoot>
-				<tr>
-					<td colspan="3" id="prev"><a href="http://www.presslayer.com/?m=201207" title="View posts for July 2012">&laquo; Jul</a></td>
-					<td class="pad">&nbsp;</td>
-					<td colspan="3" id="next" class="pad">&nbsp;</td>
-				</tr>
-				</tfoot>
-
-				<tbody>
-					<tr>
-						<td colspan="2" class="pad">&nbsp;</td><td id="today">1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-					</tr>
-					<tr>
-						<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
-					</tr>
-					<tr>
-						<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
-					</tr>
-					<tr>
-						<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
-					</tr>
-					<tr>
-						<td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
-						<td class="pad" colspan="2">&nbsp;</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>	
+	
 	<div id="categories-3" class="widget widget_categories prl-panel"><h5 class="prl-block-title">Categories</h5><ul>
 		<li class="cat-item cat-item-2"><a href="http://www.presslayer.com/?cat=2" title="View all posts filed under Design">Design</a>
 	</li>
@@ -223,7 +147,7 @@
 	
 
 
-	<div id="archives-3" class="widget widget-weather prl-panel">
+	<!--<div id="archives-3" class="widget widget-weather prl-panel">
 	<h5 class="prl-block-title">Weather</h5>
 		<div class="wt_wrapper">
 			<div class="today">
@@ -261,5 +185,5 @@
 			</div>
 			
 		</div>    
-	</div>     
+	</div> -->    
 </aside>

@@ -1,15 +1,10 @@
-<?php
-/* @var $this SiteController */
-/* @var $error array */
-
-$this->pageTitle=Yii::app()->name . ' - Error';
-$this->breadcrumbs=array(
-	'Error',
-);
-?>
-
-<h2>Error <?php echo $code; ?></h2>
-
-<div class="error">
-<?php echo CHtml::encode($message); ?>
-</div>
+<section id="main" class="prl-span-9">    
+    <div class="container"> <!-- 404 Page -->
+        <div class="page-404">
+        	<h1>404</h1>
+        	<h4>Oops, it appears you've find an error.</h4>
+        	<p>Page you were looking for doesn't exist.</p>
+        	<p><a class="button" href="<?php echo Yii::app()->createUrl('Home/default/index');?>">Back to home</a></p>
+        </div>
+    </div>
+</section>

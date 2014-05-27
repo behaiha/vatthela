@@ -2,7 +2,7 @@
    <article class="prl-article">
 		<a class="prl-thumbnail left" href="<?php echo Articles::model()->getTitleURL($row);?>">
 			<div class="prl-overlay">
-                <?php echo Articles::model()->getThumListCate($row);?>
+                <?php echo Articles::model()->getThumbai($row);?>
 			</div>
 		</a>
 		<div class="prl-article-entry">

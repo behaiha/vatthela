@@ -121,6 +121,23 @@ class Tags extends CActiveRecord
 			}
 		}
 	}
+    
+    /**
+    By Trai Ngeo @2014
+    */
+    public function getTagName($id){
+        $model = Tags::model()->findByPk($id);
+        if($model != null){
+            return $model->name;
+        }else{
+            return "Không có";
+        }
+        
+    }
+    public function getTagLink($id){
+        return Yii::app()->createUrl('Articles/tag/taglist',array('id'=>$id));
+    }
+    
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

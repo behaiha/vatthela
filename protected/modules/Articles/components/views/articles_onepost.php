@@ -2,7 +2,7 @@
     <div class="prl-post-content">
         <a href="<?php echo Articles::model()->getTitleURL($row);?>" class="prl-thumbnail">
         <span class="prl-overlay">
-             <?php echo Articles::model()->getThumIndex($row);?>
+             <?php echo Articles::model()->getThumbai($row);?>
         </span>
         </a>   
         <h3><a href="<?php echo Articles::model()->getTitleURL($row);?>"><?php echo $row->title;?></a> 
