@@ -1,6 +1,6 @@
 <?php
-/* @var $this MenuController */
-/* @var $data Menu */
+/* @var $this LinkController */
+/* @var $data Link */
 ?>
 
 <div class="view">
@@ -9,12 +9,12 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
-	<?php echo CHtml::encode($data->name); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('text')); ?>:</b>
+	<?php echo CHtml::encode($data->text); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('link')); ?>:</b>
-	<?php echo CHtml::encode($data->link); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('href')); ?>:</b>
+	<?php echo CHtml::encode($data->href); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>

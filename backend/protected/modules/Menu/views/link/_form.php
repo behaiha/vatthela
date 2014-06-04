@@ -1,13 +1,13 @@
 <?php
-/* @var $this MenuController */
-/* @var $model Menu */
+/* @var $this LinkController */
+/* @var $model Link */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'menu-form',
+	'id'=>'link-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -20,27 +20,21 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>300)); ?>
-		<?php echo $form->error($model,'name'); ?>
+		<?php echo $form->labelEx($model,'text'); ?>
+		<?php echo $form->textField($model,'text',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'text'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'link'); ?>
-		<?php echo $form->textField($model,'link',array('size'=>60,'maxlength'=>300)); ?>
-		<?php echo $form->error($model,'link'); ?>
+		<?php echo $form->labelEx($model,'href'); ?>
+		<?php echo $form->textField($model,'href',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'href'); ?>
 	</div>
-    
-    <div class="row">
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',array('1'=>"Hiện",'0'=>"Ẩn")); ?>
+		<?php echo $form->textField($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
-	</div>
-    
-    <div class="row">
-		<?php echo $form->labelEx($model,'order_possition'); ?>
-		<?php echo $form->textField($model,'order_possition',array('size'=>30)); ?>
-		<?php echo $form->error($model,'order_possition'); ?>
 	</div>
 
 	<div class="row buttons">

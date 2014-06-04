@@ -1,5 +1,5 @@
 <?php
-/* @var $this MenuController */
+/* @var $this DefaultController */
 /* @var $model Menu */
 
 $this->breadcrumbs=array(
@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Menu', 'url'=>array('index')),
+	array('label'=>'Create List Menu', 'url'=>array('createlist','id'=>$model->id)),
 	array('label'=>'Create Menu', 'url'=>array('create')),
 	array('label'=>'Update Menu', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Menu', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
@@ -23,7 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
-		'link',
 		'status',
+		'possition',
 	),
 )); ?>
