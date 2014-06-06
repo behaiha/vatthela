@@ -25,7 +25,8 @@ $this->menu=array(
 		'menu_id',
 		'table_id',
 		'table_name',
-		'position',
+		'possition',
 		'text',
+		'parent_id',
 	),
 )); ?>

@@ -21,12 +21,16 @@
 	<?php echo CHtml::encode($data->table_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('position')); ?>:</b>
-	<?php echo CHtml::encode($data->position); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('possition')); ?>:</b>
+	<?php echo CHtml::encode($data->possition); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('text')); ?>:</b>
 	<?php echo CHtml::encode($data->text); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('parent_id')); ?>:</b>
+	<?php echo CHtml::encode($data->parent_id); ?>
 	<br />
 
 

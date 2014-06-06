@@ -82,7 +82,7 @@
     var urtText = $('.url-text').val();
     var urlLink = $('.url-link').val();
     if (urlLink != '' && urtText != '') {
-        var str = 'data-url="'+urlLink+'" data-type="L" data-text="'+urtText+'"';
+        var str = 'data-url="'+urlLink+'" data-type="L" data-id="0" data-text="'+urtText+'"';
         var text = '<li id="list_4" '+str+'  value="'+index+'"><div onclick="clickLi($(this));"><span class="disclose"><span></span></span>'+urtText+'</div>';
         $('.sortable').append(text);
          $('.url-text').val('');$('.url-link').val('');
@@ -93,7 +93,7 @@
       status = val.getAttribute('data-status');
       urtText = val.getAttribute('data-text');
       urlLink = val.value;
-      var str = 'data-url="'+urlLink+'" data-type="C" data-text="'+urtText+'"';
+      var str = 'data-url="'+urlLink+'" data-id="'+urlLink+'" data-type="C" data-text="'+urtText+'"';
       var text = '<li id="list_4" '+str+'  value="'+index+'"><div onclick="clickLi($(this));"><span class="disclose"><span></span></span>'+urtText+'</div>';
       $('.sortable').append(text);
       val.parentNode.remove()
@@ -143,10 +143,11 @@
       console.log(index);
       if (val.item_id != null) {
         idx = index - 1;
-        var item ={'text':'','value':'','parent':0,'type':''};
+        var item ={'text':'','value':'','parent':0,'type':'','id':0};
         item.text = jsObj.get(idx).getAttribute('data-text');
         item.value = jsObj.get(idx).getAttribute('data-url');        
         item.type = jsObj.get(idx).getAttribute('data-type');        
+        item.id = jsObj.get(idx).getAttribute('data-id');      
         for(var i = idx; i>0; --i){
           if ((obj[i].left < obj[index].left) && (obj[i].right > obj[index].right)) {
             item.parent = i;

@@ -39,28 +39,16 @@ class MenuRelation extends CActiveRecord
 			array('id, menu_id, table_id, table_name, possition, text, parent_id', 'safe', 'on'=>'search'),
 		);
 	}
-
-
-	public function getChildValue($values)
+	public static function getLink($value)
 	{
-		$res = "";
-		foreach ($values as $key => $value) {
-			if ($value->table_name == 'L') {
-				$li = "id='list_{$value->id}' data-url='{$value->link->href}' data-id='{$value->link->id}' data-type='L' data-text=\"{$value->text}\" value='0' ";
+		if ($value != null) {
+			if ($value->table_name == "C") {
+				echo Categories::model()->getURL($value->category);
+			}elseif ($value->table_name == "L") {
+				echo $value->link->href;
 			}
-			if ($value->table_name == 'C') {
-				$li = "id='list_{$value->id}' data-url='{$value->table_id}' data-type='C' data-text=\"{$value->text}\" value='0' ";
-			}
-			if (count($value->childrens)==0){ // if node is leave
-				$res .= "<li $li ><div  onclick='clickLi($(this));'><span class='disclose'><span></span></span>{$value->text}</div>";				
-			} else {
-				$childs = $this->getChildValue($value->childrens);
-					$res .= "<li $li ><div onclick='clickLi($(this));'><span class='disclose'><span></span></span>{$value->text}</div>"."<ol>".$childs."</ol>";
-			}	
 		}
-		return $res;
 	}
-
 	/**
 	 * @return array relational rules.
 	 */

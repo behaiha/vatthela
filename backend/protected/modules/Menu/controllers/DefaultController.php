@@ -57,11 +57,15 @@ class DefaultController extends Controller
 				$text = $key['text'];
 				$value = $key['value'];
 				$parent = $key['parent'];
+				$pid = $key['id'];
 				$key["parent_id"] = 0;
 				$data[$k] = $key;
 				$test = 0;
 				if ($type == "L") {
-					$val = new Link;
+					$val = Link::model()->findByPk($pid);
+					if ($val == null) {
+						$val = new Link;
+					}
 					$val->text = $text;
 					$val->href = $value;
 					$val->status = 0;
@@ -76,7 +80,7 @@ class DefaultController extends Controller
 						$valueMenu->menu_id = $mid;
 						$valueMenu->table_id = $val->id;
 						$valueMenu->table_name = $type;
-						$valueMenu->position = $idx;
+						$valueMenu->possition = $idx;
 						$valueMenu->text = $text;
 					if ($parent == 0) {
 						$valueMenu->parent_id = $parent;

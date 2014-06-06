@@ -49,8 +49,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'menu_id',
 		'table_id',
 		'table_name',
-		'position',
+		'possition',
 		'text',
+		/*
+		'parent_id',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

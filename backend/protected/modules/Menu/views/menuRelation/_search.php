@@ -28,17 +28,22 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'table_name'); ?>
-		<?php echo $form->textField($model,'table_name'); ?>
+		<?php echo $form->textField($model,'table_name',array('size'=>11,'maxlength'=>11)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'position'); ?>
-		<?php echo $form->textField($model,'position'); ?>
+		<?php echo $form->label($model,'possition'); ?>
+		<?php echo $form->textField($model,'possition'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'text'); ?>
 		<?php echo $form->textField($model,'text',array('size'=>60,'maxlength'=>300)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'parent_id'); ?>
+		<?php echo $form->textField($model,'parent_id'); ?>
 	</div>
 
 	<div class="row buttons">
