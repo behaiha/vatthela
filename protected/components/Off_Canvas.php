@@ -6,11 +6,9 @@ class Off_Canvas extends CWidget{
         $criteria->order='order_possition ASC';
         $model_parent_cate = Categories::model()->findAll($criteria);
         
-        $criteria_menu = new CDbCriteria;
-        $criteria_menu->order='order_possition ASC';
-        $model_menu = Menus::model()->findAll($criteria_menu);
+        $menu = Menu::model()->findByAttributes(array('possition'=>'H'));
         
-        $this->render('off_canvas',array('model_parent_cate'=>$model_parent_cate,'model_menu'=>$model_menu));
+        $this->render('off_canvas',array('model_parent_cate'=>$model_parent_cate,'menu'=>$menu));
     }
 }
 ?>

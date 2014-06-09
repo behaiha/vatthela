@@ -1,6 +1,6 @@
 <?php
-/* @var $this MenuController */
-/* @var $model Menu */
+/* @var $this LinkController */
+/* @var $model Link */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,13 +17,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->label($model,'text'); ?>
+		<?php echo $form->textField($model,'text',array('size'=>60,'maxlength'=>300)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'link'); ?>
-		<?php echo $form->textField($model,'link',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->label($model,'href'); ?>
+		<?php echo $form->textField($model,'href',array('size'=>60,'maxlength'=>300)); ?>
 	</div>
 
 	<div class="row">

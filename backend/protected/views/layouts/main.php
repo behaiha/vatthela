@@ -32,10 +32,10 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'Articles', 'url'=>array('/Articles/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Banner', 'url'=>array('/Slide/slideshow/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Slideshows', 'url'=>array('/Slide/slideshow/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Categories', 'url'=>array('/Categories/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Tags', 'url'=>array('/Tags/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Menu', 'url'=>array('/Menu/menu/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Menu', 'url'=>array('/Menu/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Đổi mật khẩu', 'url'=>array('/Users/users/changepass'),'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 			),

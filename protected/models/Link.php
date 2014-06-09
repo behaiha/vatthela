@@ -1,22 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "menu".
+ * This is the model class for table "link".
  *
- * The followings are the available columns in table 'menu':
+ * The followings are the available columns in table 'link':
  * @property integer $id
- * @property string $name
+ * @property string $text
+ * @property string $href
  * @property integer $status
- * @property string $possition
  */
-class Menu extends CActiveRecord
+class Link extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'menu';
+		return 'link';
 	}
 
 	/**
@@ -27,13 +27,12 @@ class Menu extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, status, possition', 'required'),
+			array('text, href, status', 'required'),
 			array('status', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>300),
-			array('possition', 'length', 'max'=>2),
+			array('text, href', 'length', 'max'=>300),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, status, possition', 'safe', 'on'=>'search'),
+			array('id, text, href, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,7 +44,6 @@ class Menu extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'menuParents' =>array(self::HAS_MANY,'MenuRelation','menu_id','on'=>'parent_id = 0'),
 		);
 	}
 
@@ -56,9 +54,9 @@ class Menu extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'text' => 'Text',
+			'href' => 'Href',
 			'status' => 'Status',
-			'possition' => 'Possition',
 		);
 	}
 
@@ -81,9 +79,9 @@ class Menu extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('text',$this->text,true);
+		$criteria->compare('href',$this->href,true);
 		$criteria->compare('status',$this->status);
-		$criteria->compare('possition',$this->possition,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -94,7 +92,7 @@ class Menu extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Menu the static model class
+	 * @return Link the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

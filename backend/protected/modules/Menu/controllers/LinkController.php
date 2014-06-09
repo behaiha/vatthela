@@ -1,6 +1,6 @@
 <?php
 
-class MenuController extends Controller
+class LinkController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -37,7 +37,7 @@ class MenuController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'roles'=>array('admin'),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,14 +62,14 @@ class MenuController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Menu;
+		$model=new Link;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Menu']))
+		if(isset($_POST['Link']))
 		{
-			$model->attributes=$_POST['Menu'];
+			$model->attributes=$_POST['Link'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -91,9 +91,9 @@ class MenuController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Menu']))
+		if(isset($_POST['Link']))
 		{
-			$model->attributes=$_POST['Menu'];
+			$model->attributes=$_POST['Link'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,7 +122,7 @@ class MenuController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Menu');
+		$dataProvider=new CActiveDataProvider('Link');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class MenuController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Menu('search');
+		$model=new Link('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Menu']))
-			$model->attributes=$_GET['Menu'];
+		if(isset($_GET['Link']))
+			$model->attributes=$_GET['Link'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class MenuController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Menu the loaded model
+	 * @return Link the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Menu::model()->findByPk($id);
+		$model=Link::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class MenuController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Menu $model the model to be validated
+	 * @param Link $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='menu-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='link-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

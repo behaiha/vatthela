@@ -23,9 +23,9 @@
 				</li>
                 <?php endforeach;?>
                 
-                 <?php foreach($model_menu as $row):?>
+                 <?php foreach($menu->allMenus as $row):?>
                     <li class="nav-item">
-                        <a href="<?php echo $row->link; ?>"><?php echo $row->name;?></a>
+                        <a href="<?php //echo $row->link; ?>"><?php echo $row->text;?></a>
                     </li>
                 <?php endforeach;?>	
 

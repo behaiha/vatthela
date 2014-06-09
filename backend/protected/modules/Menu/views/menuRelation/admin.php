@@ -1,15 +1,15 @@
 <?php
-/* @var $this MenuController */
-/* @var $model Menu */
+/* @var $this MenuRelationController */
+/* @var $model MenuRelation */
 
 $this->breadcrumbs=array(
-	'Menus'=>array('index'),
+	'Menu Relations'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Menu', 'url'=>array('index')),
-	array('label'=>'Create Menu', 'url'=>array('create')),
+	array('label'=>'List MenuRelation', 'url'=>array('index')),
+	array('label'=>'Create MenuRelation', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#menu-grid').yiiGridView('update', {
+	$('#menu-relation-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Menus</h1>
+<h1>Manage Menu Relations</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -41,15 +41,19 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'menu-grid',
+	'id'=>'menu-relation-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'name',
-		'link',
-		'status',
-        'order_possition',
+		'menu_id',
+		'table_id',
+		'table_name',
+		'possition',
+		'text',
+		/*
+		'parent_id',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

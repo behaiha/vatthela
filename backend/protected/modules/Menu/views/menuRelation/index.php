@@ -1,18 +1,18 @@
 <?php
-/* @var $this MenuController */
+/* @var $this MenuRelationController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Menus',
+	'Menu Relations',
 );
 
 $this->menu=array(
-	array('label'=>'Create Menu', 'url'=>array('create')),
-	array('label'=>'Manage Menu', 'url'=>array('admin')),
+	array('label'=>'Create MenuRelation', 'url'=>array('create')),
+	array('label'=>'Manage MenuRelation', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Menus</h1>
+<h1>Menu Relations</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -1,5 +1,5 @@
 <?php
-/* @var $this MenuController */
+/* @var $this DefaultController */
 /* @var $model Menu */
 
 $this->breadcrumbs=array(

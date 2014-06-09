@@ -46,6 +46,7 @@ class Menu extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'menuParents' =>array(self::HAS_MANY,'MenuRelation','menu_id','on'=>'parent_id = 0'),
+			'allMenus' =>array(self::HAS_MANY,'MenuRelation','menu_id','on'=>'parent_id = 0','order'=>'possition asc'),
 		);
 	}
 
