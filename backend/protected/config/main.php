@@ -14,6 +14,7 @@ $t = array(
 	),
 
 	'modules'=>array(
+		'Ads',
         'Users',
         'Tags',
         'Categories',
