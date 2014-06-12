@@ -18,4 +18,19 @@ class DefaultController extends Controller
         
 		$this->render('index',array('model'=>$model,'pages'=>$pages));
 	}
+    
+    public function actionView($id){
+        $model = Videos::model()->findByPk($id);
+        if($model === null){
+            throw new CHttpException(404,'The requested page does not exist.');
+        }else{
+            $view_old = $model->view;
+            $view_new = $view_old + 1;
+            $model->view = $view_new;
+            if($model->save(false)){
+                $this->render('view',array('model'=>$model));    
+            }
+            
+        }
+    }
 }

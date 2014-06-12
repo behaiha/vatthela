@@ -121,7 +121,7 @@ class Videos extends CActiveRecord
     
     public function getURL($model){
         if($model != null){
-            //return Yii::app()->createUrl('Videos/default/index',array('id'=>$model->id));
+            return Yii::app()->createUrl('Videos/default/view',array('id'=>$model->id));
         }
     }
     public function getDate($model){
