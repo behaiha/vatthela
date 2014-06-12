@@ -32,6 +32,7 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'Articles', 'url'=>array('/Articles/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Quảng cáo', 'url'=>array('/Ads/ads/admin'), 'visible'=>!Yii::app()->user->isGuest),
    	            array('label'=>'Videos', 'url'=>array('/Videos/videos/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Slideshows', 'url'=>array('/Slide/slideshow/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Categories', 'url'=>array('/Categories/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
