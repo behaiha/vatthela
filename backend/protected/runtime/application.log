@@ -5743,3 +5743,15 @@ in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
 2014/06/12 09:29:13 [warning] [application] Failed to set unsafe attribute "hot" of "Videos".
 in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (104)
 in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 15:19:17 [warning] [application] Failed to set unsafe attribute "image" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 15:19:17 [warning] [application] Failed to set unsafe attribute "hot" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 15:19:17 [warning] [application] Failed to set unsafe attribute "endhot_date" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 15:19:17 [warning] [application] Failed to set unsafe attribute "description" of "Articles".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
