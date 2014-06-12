@@ -1,10 +1,35 @@
 <?php
+    /**
+    By Trai Ngeo @2014
+    get id youtube
+    **/
+    function get_youtube_id_from_url($url){
+        if(stristr($url,'youtu.be/') === FALSE and stristr($url,'youtube') === FALSE){
+            return false;
+        }
+        else if(stristr($url,'youtu.be/')){ 
+            preg_match('/(https|http):\/\/(.*?)\/([a-zA-Z0-9_]{11})/i', $url, $final_ID);
+            if($final_ID != null and $final_ID != ''){
+                return $final_ID[3]; 
+            }else{
+                return false;
+            }
+        }else { 
+            preg_match('/(https|http):\/\/(.*?)\/(embed\/|watch\?v=|(.*?)&v=|v\/|e\/|.+\/|watch.*v=|)([a-zA-Z0-9_]{11})/i', $url, $IDD); 
+            if($IDD != null and $IDD != ''){
+                return $IDD[5]; 
+            }else{
+                return false;
+            }
+        }
+    }
+
     function getTypeFile($string){
         $pieces = explode(".", $string);
         $leng = count($pieces);
         return $pieces[$leng-1];
     }
-  function checkdirectory($name_root_directory)
+    function checkdirectory($name_root_directory)
     {
         if (!is_dir($name_root_directory))
         {
@@ -15,18 +40,18 @@
                 //mkdir($name_root_directory.'_300', 0777);
                     //mkdir($name_root_directory.'Banner/originimage', 0777);
                     //mkdir($name_root_directory.'Banner/resize', 0777);
-
+    
                 /*mkdir($name_root_directory.'Place', 0777);
                     mkdir($name_root_directory.'Place/originimage', 0777);
                     mkdir($name_root_directory.'Place/resize', 0777);
-
+    
                 mkdir($name_root_directory.'Avatar',0777);
                     mkdir($name_root_directory.'Avatar/originimage', 0777);
-
+    
                 mkdir($name_root_directory.'Member', 0777);
                     mkdir($name_root_directory.'Member/originimage', 0777);
                     mkdir($name_root_directory.'Member/173_150', 0777);
-
+    
                 mkdir($name_root_directory.'Thumb',0777);
                     mkdir($name_root_directory.'Thumb/originimage', 0777);*/
         }

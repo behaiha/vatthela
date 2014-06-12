@@ -1,6 +1,6 @@
 <?php 
 define('DB_NAME', 'vatthela');
-define('APP_NAME', 'Vật thể lạ');
+define('APP_NAME', 'LÀNG BÓNG');
 
 /** MySQL database username */
 define('DB_USER', 'root');

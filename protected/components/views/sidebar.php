@@ -36,7 +36,7 @@
     <!--End bài viết xem nhiều nhất-->	
 	
 	
-	<div id="post-pic-widget" class="widget photos-widget prl-panel">	
+	<!--<div id="post-pic-widget" class="widget photos-widget prl-panel">	
 	<h5 class="prl-block-title">Article photos</h5>
 		<div class="pt-wrapper">
 			<div class="">
@@ -48,7 +48,7 @@
 				<a href="single.php" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/images/_small/6.jpg" alt="Lorem ipsum dolor sit amet" /></a>
 			</div>
 		</div>
-	</div>	
+	</div>	-->
 	
 	<div id="social-widget-1" class="widget social-widget prl-panel">		<!-- BEGIN WIDGET -->
 		<h5 class="prl-block-title amber">Social Network</h5>
