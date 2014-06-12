@@ -4,5 +4,6 @@
 	<?php $this->widget('Articles.components.Articles_News');?>    
 	<?php foreach($model as $row):?>
 	   <?php $this->widget('Articles.components.Articles_DisplayHomeNews',array('model'=>$row));?>    
-    <?php endforeach;?>           
+    <?php endforeach;?> 
+    <?php $this->widget('Videos.components.Videos_DisplayHome');?>              
 </section>

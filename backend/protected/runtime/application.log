@@ -5619,3 +5619,127 @@ Stack trace:
 REQUEST_URI=/vatthela/backend/index.php?r=Menu/menuRelation/admin
 HTTP_REFERER=http://localhost/vatthela/backend/index.php?r=Menu/MenuRelation
 ---
+2014/06/09 14:56:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('Videos/default/...')
+#3 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/vatthela.com/vatthela/backend/index.php?r=Videos/default/index.php
+---
+2014/06/12 04:59:08 [error] [php] stristr() expects parameter 1 to be string, array given (C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\config\globals.php:7)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\actions\CInlineAction.php(49): VideosController->actionCreate()
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilterChain.php(133): VideosController->runAction()
+#3 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CInlineFilter.php(58): VideosController->filterAccessControl()
+#6 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(265): VideosController->runActionWithFilters()
+#9 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(282): VideosController->run()
+#10 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php(24): CWebApplication->run()
+REQUEST_URI=/vatthela.com/vatthela/backend/index.php?r=Videos/videos/create
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\config\globals.php (7)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 05:05:51 [error] [php] Array to string conversion (C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php:73)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilterChain.php(133): VideosController->runAction()
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CInlineFilter.php(58): VideosController->filterAccessControl()
+#4 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(265): VideosController->runActionWithFilters()
+#7 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(282): VideosController->run()
+#8 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php(24): CWebApplication->run()
+REQUEST_URI=/vatthela.com/vatthela/backend/index.php?r=Videos/videos/create
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (73)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 05:08:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('Videos/videos/d...')
+#9 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php(24): CApplication->run()
+#11 {main}
+REQUEST_URI=/vatthela.com/vatthela/backend/index.php?r=Videos/videos/delete&id=1
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/backend/index.php?r=Videos/videos/view&id=1
+---
+2014/06/12 06:30:12 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 06:30:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('Videos/videos/a...')
+#9 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php(24): CApplication->run()
+#11 {main}
+REQUEST_URI=/vatthela.com/vatthela/backend/index.php?r=Videos/videos/admin
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/backend/index.php?r=Videos/videos/create
+---
+2014/06/12 06:31:58 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 06:35:26 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:09:07 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:09:42 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:10:43 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (72)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:27:24 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (102)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:27:24 [warning] [application] Failed to set unsafe attribute "active" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (102)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:27:24 [warning] [application] Failed to set unsafe attribute "hot" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (102)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:28:46 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (104)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:28:46 [warning] [application] Failed to set unsafe attribute "active" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (104)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:28:46 [warning] [application] Failed to set unsafe attribute "hot" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (104)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:29:13 [warning] [application] Failed to set unsafe attribute "video_description" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (104)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:29:13 [warning] [application] Failed to set unsafe attribute "active" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (104)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)
+2014/06/12 09:29:13 [warning] [application] Failed to set unsafe attribute "hot" of "Videos".
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Videos\controllers\VideosController.php (104)
+in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (24)

@@ -17,6 +17,7 @@ $t = array(
         'Home',
         'Articles',
         'Users',
+        'Videos', 
 		// uncomment the following to enable the Gii tool
 		
 		

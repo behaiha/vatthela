@@ -21,6 +21,7 @@ $t = array(
         'Slide',
         'Services',
         'Menu', 
+        'Videos',
 		// uncomment the following to enable the Gii tool
 		
 		
