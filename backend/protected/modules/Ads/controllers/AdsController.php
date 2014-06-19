@@ -87,15 +87,23 @@ class AdsController extends Controller
 			if($model->save()){
                 if ($model->type == 1) {
                 	checkdirectory(TEMP_ADS);
+                	checkdirectory(ADS_DATE,'check');
 	                $image =  time()."-".$model->image;
 	                $model->image->saveAs(Yii::app()->basePath .'/../'.TEMP_ADS . $image);
 	                $image_thumbai = Yii::app()->image->load(Yii::app()->basePath .'/../'.TEMP_ADS . $image);
                 	$image_thumbai->resize($model->width,$model->height, Image::NONE);  
-                    $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS. $image); 
-                    $path = TEMP_ADS;
-                	Ads::model()->updateByPk($model->id,array('path'=>$path,'image'=>$image));
-                }else if ($model->type == 2) {
-                	
+                    $image_thumbai->save(Yii::getPathOfAlias('webroot').'/'.ADS_DATE. $image); 
+                    $path = ADS_DATE;
+                    $model->path = $path;
+                    $model->image = $image;
+                    $model->save(false);
+                	if($model->image != ''){
+	                    $temp_image = Yii::app()->basePath .'/../'.TEMP_ADS.$model->image;
+	                    var_dump(file_exists($temp_image));
+	                    if (file_exists($temp_image)){
+	                        unlink($temp_image);
+	                    }
+	                }
                 }
 				$this->redirect(array('admin'));
             }
