@@ -1,39 +1,12 @@
 <aside id="sidebar" class="prl-span-3">	
-	<div class="widget prl-panel">
-		<script>
-			$(function () {
-				$("#accordion").jAccordion(); 
-			});	
-		</script>
-		<div id="accordion" class="prl-accordion">
-			<section>
-				<a href="#acc1" id="acc1" class="head">MOST RECENT VIDEO</a>
-				<div class="acc-content">
-					<iframe src="//player.vimeo.com/video/67547541" width="500" height="281"></iframe>
-					<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h5>
-				</div>
-			</section>
-			<section>
-				<a href="#acc2" id="acc2" class="head">Accordion 2</a>
-				<div class="acc-content">
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex. Lorem ipsum dolor sit amet, consectetur 
-				adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-				esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-				mollit anim.</p></div>
-			</section>
-			<section>
-				<a href="#acc3" id="acc3" class="head">Accordion 3</a>
-				<div class="acc-content"><p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-				nostrud exercitation ullamco laboris nisi ut aliquip ex. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-				ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-				reprehenderit.</p></div>
-			</section>
-		</div>
-	</div>    
+	<!--Most recent video-->
+    <?php $this->widget('Videos.Components.Videos_MostRecent');?>
+    
     <!--Bài viết xem nhiều nhất-->
 	<?php $this->widget('Articles.Components.Articles_MostView');?>
     <!--End bài viết xem nhiều nhất-->	
+    
+    <?php $this->widget('Videos.Components.Videos_MostView');?>
 	
 	
 	<!--<div id="post-pic-widget" class="widget photos-widget prl-panel">	

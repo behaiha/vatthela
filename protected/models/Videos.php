@@ -129,4 +129,8 @@ class Videos extends CActiveRecord
             return date('F j, Y, g:i a', strtotime ($model->video_createdate));
         }
     }
+    
+    public function getThumbaiSmall($model){
+        return '<img src="'.$model->video_image.'" width="60"/>';
+    }
 }
