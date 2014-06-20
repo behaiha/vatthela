@@ -8,7 +8,7 @@ class Off_Canvas extends CWidget{
         
         $menu = Menu::model()->findByAttributes(array('possition'=>'H'));
         
-        $this->render('off_canvas',array('model_parent_cate'=>$model_parent_cate,'menu'=>$menu));
+        // $this->render('off_canvas',array('model_parent_cate'=>$model_parent_cate,'menu'=>$menu));
     }
 }
 ?>

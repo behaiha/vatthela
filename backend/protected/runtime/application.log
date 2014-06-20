@@ -487,3 +487,11 @@ in C:\xampp\htdocs\vatthela\backend\index.php (26)
 2014/06/12 15:37:53 [warning] [application] Failed to set unsafe attribute "html" of "Ads".
 in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
 in C:\xampp\htdocs\vatthela\backend\index.php (26)
+2014/06/19 06:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Gii".' in C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela\backend\index.php(26): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela/backend/index.php?r=Gii
+---
