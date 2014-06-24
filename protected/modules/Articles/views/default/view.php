@@ -5,7 +5,7 @@
 	   <div class="prl-grid">
 			<div class="prl-span-9 prl-span-flip">
 				<div class="prl-entry-content">
-                    <b style="color: #e74c3c;"><?php echo $model->short_description;?></b>
+                    <b style="color: #e74c3c;"><?php echo $model->short_description;?></b><br />
 					<?php echo $model->description;?>
 				</div> <!-- .prl-entry-content -->
 			</div>

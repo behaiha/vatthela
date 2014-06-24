@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Giai ngoai hang</title>
+    <title>Vật thể lạ</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/weather-icons.min.css">
@@ -18,4 +18,9 @@
     <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/custom.js"></script>
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/ta.css" type='text/css' media="screen" />
     <link rel='stylesheet' href='<?php echo Yii::app()->theme->baseUrl; ?>/assets/css/minhtien.css' type='text/css'/> 
+    
+    <link  rel="icon" type="image/x-icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.png"/>
+    <link  rel="shortcut icon" type="image/x-icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.png"/>
+    <link  rel="icon" type="image/png" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.png"/>
+    <link  rel="shortcut icon" type="image/png" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.png"/>
 </head>
