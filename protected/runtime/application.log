@@ -669,3 +669,24 @@ Stack trace:
 #26 {main}
 REQUEST_URI=/vatthela/
 ---
+2014/06/24 14:38:54 [error] [php] Undefined variable: model_parent_cate (C:\xampp\htdocs\vatthela\protected\components\Off_Canvas.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\themes\classic\views\layouts\home.php(12): DefaultController->widget()
+#1 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#3 C:\xampp\htdocs\vatthela\framework\web\CController.php(784): DefaultController->renderFile()
+#4 C:\xampp\htdocs\vatthela\protected\modules\Articles\controllers\DefaultController.php(27): DefaultController->render()
+#5 unknown(0): DefaultController->actionView()
+#6 C:\xampp\htdocs\vatthela\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#7 C:\xampp\htdocs\vatthela\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\xampp\htdocs\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\vatthela\framework\web\CController.php(286): DefaultController->runAction()
+#10 C:\xampp\htdocs\vatthela\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#11 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(282): DefaultController->run()
+#12 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\vatthela\index.php(20): CWebApplication->run()
+REQUEST_URI=/vatthela/index.php?r=Articles/default/view&id=19
+in C:\xampp\htdocs\vatthela\protected\components\Off_Canvas.php (5)
+in C:\xampp\htdocs\vatthela\themes\classic\views\layouts\home.php (12)
+in C:\xampp\htdocs\vatthela\protected\modules\Articles\controllers\DefaultController.php (27)

@@ -132,72 +132,40 @@ class AdsController extends Controller
 			$model->attributes=$_POST['Ads'];
             $model->title = $_POST['Ads']['title'];
             $model->alt = $_POST['Ads']['alt'];
+            $model->html = $_POST['Ads']['html'];
+            $model->height = $_POST['Ads']['height'];
+            $model->width = $_POST['Ads']['width'];
             $model->mobile = $_POST['Ads']['mobile'];
 			$model->url_link = $_POST['Ads']['url_link'];
             $model->image = CUploadedFile::getInstance($model, 'image');
-            if($model->validate()){
-                if($model->image != null){
-                    checkdirectory(TEMP_ADS);
-                    $image = time()."-".$model->image;
-                    $model->image->saveAs(Yii::app()->basePath .'/../'.TEMP_ADS . $image);
-                    
-                    $image_thumbai = Yii::app()->image->load(Yii::app()->basePath .'/../'.TEMP_ADS . $image);
-                    if($model->mobile != 1){
-                        if($model->possition == 1){
-                            $image_thumbai->resize(960, 304, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_TOP. $image);              
-                        }else if($model->possition == 2){
-                            $image_thumbai->resize(100, 100, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_BOTTOM. $image);      
-                        }else if($model->possition == 3){
-                            $image_thumbai->resize(250, 300, Image::AUTO);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_LEFT. $image);      
-                        }else if($model->possition == 4){
-                            $image_thumbai->resize(250, 300, Image::AUTO);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_RIGHT. $image);      
-                        }else if($model->possition == 5){
-                            $image_thumbai->resize(353, 141, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_CENTER. $image);      
-                        }
-                    }else{
-                        if($model->possition == 2){
-                            $image_thumbai->resize(300, 250, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_MOBILE. $image); 
-                         }else{
-                            $image_thumbai->resize(697, 271, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_MOBILE. $image);  
-                         } 
-                    }
-                    
-                    $path = TEMP_ADS;
-                    $model->path = $path;
-                    $model->image = $image;
-                    //GameFile::model()->updateByPk($id,array('path'=>$path));
-                }else{
-                    $model->image = $image_temp;
-                    if($model->possition != $possition){
-                        $image_thumbai = Yii::app()->image->load(Yii::app()->basePath .'/../'.TEMP_ADS . $image_temp);
-                        if($model->possition == 1){
-                            $image_thumbai->resize(1002, 304, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_TOP. $image_temp);              
-                        }else if($model->possition == 2){
-                            $image_thumbai->resize(100, 100, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_BOTTOM. $image_temp);      
-                        }else if($model->possition == 3){
-                            $image_thumbai->resize(250, 300, Image::AUTO);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_LEFT. $image_temp);      
-                        }else if($model->possition == 4){
-                            $image_thumbai->resize(250, 300, Image::AUTO);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_RIGHT. $image_temp);      
-                        }else if($model->possition == 5){
-                            $image_thumbai->resize(353, 141, Image::NONE);  
-                            $image_thumbai->save(Yii::getPathOfAlias('webroot').'/../'.ADS_CENTER. $image_temp);      
-                        }
-                    }
-                }
+            if ($model->type ==  1) {
+            	$model->scenario = 'image';
+            }
+            if ($model->type ==  2) {
+            	$model->scenario = 'html';
             }
 			if($model->save()){
-			     $this->redirect(array('view','id'=>$model->id));
+                if ($model->type == 1) {
+                	checkdirectory(TEMP_ADS);
+                	checkdirectory(ADS_DATE,'check');
+	                $image =  time()."-".$model->image;
+	                $model->image->saveAs(Yii::app()->basePath .'/../'.TEMP_ADS . $image);
+	                $image_thumbai = Yii::app()->image->load(Yii::app()->basePath .'/../'.TEMP_ADS . $image);
+                	$image_thumbai->resize($model->width,$model->height, Image::NONE);  
+                    $image_thumbai->save(Yii::getPathOfAlias('webroot').'/'.ADS_DATE. $image); 
+                    $path = ADS_DATE;
+                    $model->path = $path;
+                    $model->image = $image;
+                    $model->save(false);
+                	if($model->image != ''){
+	                    $temp_image = Yii::app()->basePath .'/../'.TEMP_ADS.$model->image;
+	                    var_dump(file_exists($temp_image));
+	                    if (file_exists($temp_image)){
+	                        unlink($temp_image);
+	                    }
+	                }
+                }
+				$this->redirect(array('admin'));
             }
 		}
 

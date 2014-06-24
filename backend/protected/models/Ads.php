@@ -33,7 +33,7 @@ class Ads extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('start_time, end_time, possition, type, _order', 'required'),
-			array('width,height','required','on'=>'image'),
+			array('width,height,image','required','on'=>'image'),
 			array('html','required','on'=>'html'),
 			array('possition, type, isCurrentPage, _order', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().

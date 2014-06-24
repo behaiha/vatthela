@@ -543,3 +543,195 @@ in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (26)
 2014/06/24 13:38:16 [warning] [application] Failed to set unsafe attribute "description" of "Articles".
 in C:\xampp\htdocs\vatthela.com\vatthela\backend\protected\modules\Articles\controllers\DefaultController.php (137)
 in C:\xampp\htdocs\vatthela.com\vatthela\backend\index.php (26)
+2014/06/24 14:17:02 [error] [php] Undefined variable: model (C:\xampp\htdocs\vatthela\backend\protected\modules\Config\views\default\logo.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\web\CController.php(869): DefaultController->renderFile()
+#1 C:\xampp\htdocs\vatthela\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\vatthela\backend\protected\modules\Config\controllers\DefaultController.php(53): DefaultController->render()
+#3 C:\xampp\htdocs\vatthela\framework\web\actions\CInlineAction.php(49): DefaultController->actionLogo()
+#4 C:\xampp\htdocs\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\vatthela\framework\web\filters\CFilterChain.php(133): DefaultController->runAction()
+#6 C:\xampp\htdocs\vatthela\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\vatthela\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\vatthela\framework\web\filters\CInlineFilter.php(58): DefaultController->filterAccessControl()
+#9 C:\xampp\htdocs\vatthela\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\vatthela\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\vatthela\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#12 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(282): DefaultController->run()
+#13 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\vatthela\backend\index.php(26): CWebApplication->run()
+REQUEST_URI=/vatthela/backend/index.php?r=Config/default/logo
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Config\views\default\logo.php (21)
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Config\controllers\DefaultController.php (53)
+in C:\xampp\htdocs\vatthela\backend\index.php (26)
+2014/06/24 14:19:45 [error] [exception.CException] exception 'CException' with message 'Property "Config.image" is not defined.' in C:\xampp\htdocs\vatthela\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\db\ar\CActiveRecord.php(145): CComponent->__get('image')
+#1 C:\xampp\htdocs\vatthela\backend\protected\modules\Config\views\default\logo.php(24): CActiveRecord->__get('image')
+#2 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\vatthela\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\vatthela\framework\web\CController.php(782): CController->renderPartial('logo', Array, true)
+#6 C:\xampp\htdocs\vatthela\backend\protected\modules\Config\controllers\DefaultController.php(53): CController->render('logo', Array)
+#7 C:\xampp\htdocs\vatthela\framework\web\actions\CInlineAction.php(49): DefaultController->actionLogo()
+#8 C:\xampp\htdocs\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\vatthela\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\vatthela\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\vatthela\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\vatthela\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\vatthela\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\vatthela\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\vatthela\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(282): CController->run('logo')
+#17 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/default/...')
+#18 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\vatthela\backend\index.php(26): CApplication->run()
+#20 {main}
+REQUEST_URI=/vatthela/backend/index.php?r=Config/default/logo
+HTTP_REFERER=http://localhost/vatthela/backend/index.php?r=Config/default/admin
+---
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "mobile" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "title" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "image" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "width" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "height" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "alt" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "url_link" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:17 [warning] [application] Failed to set unsafe attribute "html" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "mobile" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "title" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "image" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "width" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "height" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "alt" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "url_link" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:47:44 [warning] [application] Failed to set unsafe attribute "html" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "mobile" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "title" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "image" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "width" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "height" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "alt" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "url_link" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:49:14 [warning] [application] Failed to set unsafe attribute "html" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "mobile" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "title" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "image" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "width" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "height" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "alt" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "url_link" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:50:43 [warning] [application] Failed to set unsafe attribute "html" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (72)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "mobile" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "title" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "image" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "width" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "height" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "alt" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "url_link" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:52:51 [warning] [application] Failed to set unsafe attribute "html" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "mobile" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "title" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "image" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "width" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "height" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "alt" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "url_link" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
+2014/06/24 14:57:11 [warning] [application] Failed to set unsafe attribute "html" of "Ads".
+in C:\xampp\htdocs\vatthela\backend\protected\modules\Ads\controllers\AdsController.php (132)
+in C:\xampp\htdocs\vatthela\backend\index.php (27)
