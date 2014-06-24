@@ -20,9 +20,6 @@ class DefaultController extends Controller
         if($model === null){
             throw new CHttpException(404,'The requested page does not exist.');
         }else{
-            $url = Articles::model()->getTitleURL($model);
-            Yii::import("application.extensions.Social"); 
-            echo $url;
             $view_old = $model->view;
             $view_new = $view_old + 1;
             $model->view = $view_new;

@@ -14,12 +14,7 @@
 					<span><i class="fa fa-calendar-o"></i><?php echo " ".Articles::model()->getDate($model);?></span><br /> 
 					<span><a href="#comment"><i class="fa fa-comment-o"></i> 23</a></span>
 					<i class="fa fa-eye"></i> <?php echo $model->view;?>
-				</div>
-                <hr class="prl-article-divider">
-                <p class="rating-head">User rating: 3.76 (440)</p>
-                <p class="prl-post-rating prl-user-rating">
-                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i>
-                </p>						
+				</div>						
 				<hr class="prl-article-divider">
 				
 				<ul class="prl-list prl-list-sharing">
