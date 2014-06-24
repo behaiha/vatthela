@@ -1,5 +1,5 @@
 <div class="widget widget-recent-post prl-panel">
-	<a href="<?php echo Articles::model()->getViewMostURL();?>"><h5 class="prl-block-title">Xem nhiều nhất</h5></a>
+	<a href="<?php echo Articles::model()->getViewMostURL();?>"><h5 class="prl-block-title">Bài viết xem nhiều nhất</h5></a>
 	<ul class="prl-list prl-list-line">
         <?php foreach($model as $row):?>
 		<li>
