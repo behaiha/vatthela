@@ -669,3 +669,24 @@ Stack trace:
 #26 {main}
 REQUEST_URI=/vatthela/
 ---
+2014/06/25 14:29:10 [error] [php] mkdir(): File exists (C:\xampp\htdocs\vatthela.com\vatthela\framework\utils\CFileHelper.php:307)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CAssetManager.php(251): copyDirectory()
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CClientScript.php(510): CAssetManager->publish()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CClientScript.php(547): CClientScript->getCoreScriptUrl()
+#3 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CClientScript.php(348): CClientScript->getPackageBaseUrl()
+#4 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CClientScript.php(208): CClientScript->renderCoreScripts()
+#5 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(351): CClientScript->render()
+#6 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(788): DefaultController->processOutput()
+#7 C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\controllers\DefaultController.php(13): DefaultController->render()
+#8 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#9 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(286): DefaultController->runAction()
+#11 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#12 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(282): DefaultController->run()
+#13 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CWebApplication->run()
+REQUEST_URI=/vatthela.com/vatthela/
+in C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\controllers\DefaultController.php (13)
+in C:\xampp\htdocs\vatthela.com\vatthela\index.php (20)
