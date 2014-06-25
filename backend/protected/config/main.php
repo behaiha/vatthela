@@ -23,6 +23,7 @@ $t = array(
         'Services',
         'Menu', 
         'Videos',
+        'Config',
 		// uncomment the following to enable the Gii tool
 		
 		

@@ -1,15 +1,14 @@
-<?php $image = ''; ?>
-<tr>
-    <td><?php echo $form->labelEx($model,$this->name); ?></td>
-    <td valign="top">
-        <div class="image">
-            <img src="http://localhost/opencart/image/cache/no_image-100x100.jpg" alt="" id="thumb" />
-            <br />
-        <a onclick="">Browse</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a onclick="$('#thumb').attr('src', 'http://localhost/opencart/image/cache/no_image-100x100.jpg'); $('#image').attr('value', '');">Clear</a></div></td>
-</tr>
-<?php echo $form->fileField($model,$this->name,array('id'=>'filesToUpload')); ?>
-<?php echo $form->error($model,'image'); ?>
+<?php $image = ''; 
+    if ($this->image != '') {
+            $image = $this->image;
+        }
+?>
+<div class="row">
+    <?php echo $form->labelEx($model,$this->name); ?>
+    <?php echo $form->fileField($model,$this->name,array('id'=>'filesToUpload')); ?>
+    <?php echo $form->error($model,$this->name); ?>
+</div>
+<img src="<?php echo $image; ?>" id="image">
 <script>
 var count = 0;
 function TypeFile()
