@@ -20,6 +20,19 @@ class DefaultController extends Controller
         if($model === null){
             throw new CHttpException(404,'The requested page does not exist.');
         }else{
+            $seo_image = '/'.formatPath($model->path).'thumbai_300/'.$model->image;
+            $seo_url = Yii::app()->request->requestUri;
+            
+            $seo_title = $model->seo_title;
+            $seo_description =$model->seo_description;
+            if ($model->seo_title == '') {
+                $seo_title = $model->title;
+                if (strlen($model->title) > 70) {
+                    $seo_title = CutString($model->title,70);
+                }
+            }
+            $this->setPageSeo($seo_title,$seo_description);
+            $this->setOpenGraph($seo_title, $seo_description, $seo_image, $seo_url);
             $view_old = $model->view;
             $view_new = $view_old + 1;
             $model->view = $view_new;

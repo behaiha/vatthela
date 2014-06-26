@@ -11,6 +11,7 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 define('ADS','images/ads/');
 define('LOGO','images/logo/');
+define('CATEGOGIES_IMAGE','../images/category/');
 define('AVATAR','../images/users/avatar/');
 define('SERVER','../images/server/');
 define('TEMP_IMAGE','../images/temp_image/');

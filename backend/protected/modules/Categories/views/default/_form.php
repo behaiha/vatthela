@@ -13,8 +13,15 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+	'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 	<?php echo $form->errorSummary($model); ?>
+	<?php
+    $image = '';
+    if ($model->image != '') {
+        $image = Yii::app()->request->baseUrl.'/../'.CATEGOGIES_IMAGE.$model->image;
+    } 
+    $this->widget('Articles.components.UploadImageWidget',array('model'=>$model,'form'=>$form,'name'=>'image','image'=>$image)); ?>
 	<div class="row">
 
 		<?php 

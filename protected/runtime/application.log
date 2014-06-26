@@ -690,3 +690,82 @@ REQUEST_URI=/vatthela/index.php?r=Articles/default/view&id=19
 in C:\xampp\htdocs\vatthela\protected\components\Off_Canvas.php (5)
 in C:\xampp\htdocs\vatthela\themes\classic\views\layouts\home.php (12)
 in C:\xampp\htdocs\vatthela\protected\modules\Articles\controllers\DefaultController.php (27)
+2014/06/26 14:43:36 [error] [php] Use of undefined constant LOGO - assumed 'LOGO' (C:\xampp\htdocs\vatthela\protected\models\Config.php:57)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(95): Header->renderInternal()
+#1 C:\xampp\htdocs\vatthela\framework\web\widgets\CWidget.php(244): Header->renderFile()
+#2 C:\xampp\htdocs\vatthela\protected\components\Header.php(4): Header->render()
+#3 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(147): Header->init()
+#4 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(172): DefaultController->createWidget()
+#5 C:\xampp\htdocs\vatthela\themes\classic\views\layouts\home.php(8): DefaultController->widget()
+#6 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#8 C:\xampp\htdocs\vatthela\framework\web\CController.php(784): DefaultController->renderFile()
+#9 C:\xampp\htdocs\vatthela\protected\modules\Articles\controllers\DefaultController.php(13): DefaultController->render()
+#10 C:\xampp\htdocs\vatthela\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#11 C:\xampp\htdocs\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\vatthela\framework\web\CController.php(286): DefaultController->runAction()
+#13 C:\xampp\htdocs\vatthela\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#14 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(282): DefaultController->run()
+#15 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\vatthela\index.php(20): CWebApplication->run()
+REQUEST_URI=/vatthela/
+in C:\xampp\htdocs\vatthela\protected\models\Config.php (57)
+in C:\xampp\htdocs\vatthela\protected\components\views\header.php (2)
+in C:\xampp\htdocs\vatthela\protected\components\Header.php (4)
+2014/06/26 14:46:45 [error] [php] Use of undefined constant LOGO - assumed 'LOGO' (C:\xampp\htdocs\vatthela\protected\models\Config.php:57)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(95): Header->renderInternal()
+#1 C:\xampp\htdocs\vatthela\framework\web\widgets\CWidget.php(244): Header->renderFile()
+#2 C:\xampp\htdocs\vatthela\protected\components\Header.php(4): Header->render()
+#3 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(147): Header->init()
+#4 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(172): DefaultController->createWidget()
+#5 C:\xampp\htdocs\vatthela\themes\classic\views\layouts\home.php(8): DefaultController->widget()
+#6 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\vatthela\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#8 C:\xampp\htdocs\vatthela\framework\web\CController.php(784): DefaultController->renderFile()
+#9 C:\xampp\htdocs\vatthela\protected\modules\Articles\controllers\DefaultController.php(13): DefaultController->render()
+#10 C:\xampp\htdocs\vatthela\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#11 C:\xampp\htdocs\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\vatthela\framework\web\CController.php(286): DefaultController->runAction()
+#13 C:\xampp\htdocs\vatthela\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#14 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(282): DefaultController->run()
+#15 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\vatthela\index.php(20): CWebApplication->run()
+REQUEST_URI=/vatthela/
+in C:\xampp\htdocs\vatthela\protected\models\Config.php (57)
+in C:\xampp\htdocs\vatthela\protected\components\views\header.php (2)
+in C:\xampp\htdocs\vatthela\protected\components\Header.php (4)
+2014/06/26 16:38:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\vatthela\protected\modules\Articles\controllers\CategoryController.php:9
+Stack trace:
+#0 [internal function]: CategoryController->actionViewArticleOfCate('100')
+#1 C:\xampp\htdocs\vatthela\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#2 C:\xampp\htdocs\vatthela\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#3 C:\xampp\htdocs\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\vatthela\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\vatthela\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(282): CController->run('viewArticleOfCa...')
+#7 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('Articles/Catego...')
+#8 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\vatthela\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/vatthela/index.php?r=Articles/Category/viewArticleOfCate&id=100
+---
+2014/06/26 16:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\vatthela\protected\modules\Articles\controllers\CategoryController.php:9
+Stack trace:
+#0 [internal function]: CategoryController->actionViewArticleOfCate('100')
+#1 C:\xampp\htdocs\vatthela\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#2 C:\xampp\htdocs\vatthela\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#3 C:\xampp\htdocs\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\vatthela\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\vatthela\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(282): CController->run('viewArticleOfCa...')
+#7 C:\xampp\htdocs\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('Articles/Catego...')
+#8 C:\xampp\htdocs\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\vatthela\index.php(22): CApplication->run()
+#10 {main}
+REQUEST_URI=/vatthela/index.php?r=Articles/Category/viewArticleOfCate&id=100
+HTTP_REFERER=http://localhost/vatthela/index.php?r=Articles/Category/viewArticleOfCate&id=100
+---

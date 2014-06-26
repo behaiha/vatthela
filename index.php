@@ -12,6 +12,8 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 define('SLIDE_SHOW','/images/slideshow/');
 define('FIGURE_NAME', 'cate');
+define('LOGO','/images/logo/');
+define('CATEGOGIES_IMAGE','/images/category/');
 
 
 require_once($_config);

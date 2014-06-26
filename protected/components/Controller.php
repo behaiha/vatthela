@@ -10,6 +10,15 @@ class Controller extends CController
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
 	 */
     public $layout='//layouts/home';
+    public $pageTitleInfo;
+	public $keywords;
+	public $robotsIndex;
+
+	public $face_title;
+    public $face_des;
+    public $face_image;
+    public $face_url;
+    public $face_status = 1;
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
 	 */
@@ -20,4 +29,18 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+	public function setPageSeo($title,$desc,$keywords ='',$robots = '')
+	{
+		$this->pageTitleInfo = $title;
+		$this->keywords = $keywords;
+		$this->robotsIndex = $robots;
+		Yii::app()->clientScript->registerMetaTag($desc, 'Description');
+	}
+	public function setOpenGraph($title,$des,$image,$url){
+		$this->face_status = 1;
+        $this->face_title = $title;
+        $this->face_des = $des;
+        $this->face_image = $image;
+        $this->face_url = $url;
+    }
 }

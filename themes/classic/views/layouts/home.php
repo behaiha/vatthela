@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php $this->widget('application.components.Head');?>
+    <?php 
+                $this->widget('application.components.Head',array(
+                      'pageTitleInfo'=>$this->pageTitleInfo,
+                      'keywords' =>$this->keywords,
+                      'robotsIndex' => $this->robotsIndex,
+                      'face_title'=>$this->face_title,
+                      'face_des'=>$this->face_des,
+                      'face_image'=>$this->face_image,
+                      'face_url'=>$this->face_url,
+                      'face_status'=>$this->face_status
+                    ));
+                ?>
         
     <body class="site-boxed">
     	<div class="site-wrapper">

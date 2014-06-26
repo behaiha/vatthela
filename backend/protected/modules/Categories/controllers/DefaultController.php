@@ -86,9 +86,22 @@ class DefaultController extends Controller
 			$model->user_id = Yii::app()->user->id;
 			$model->active = 0;
 			$model->url = toSlug(stripVietnamese($model->title));
-			$model->create_date=new CDbExpression('NOW()');
-			if($model->save())
-				$this->redirect(array('index'));
+			$model->create_date=date("Y-m-d H:i:s");
+			$model->user_id = Yii::app()->user->id;
+			$model->image=CUploadedFile::getInstance($model,'image');
+			 if($model->validate()){
+                if($model->image != null){
+                    $imgs = explode(".", $model->image);
+                	$duoi = $imgs[count($imgs)-1];
+                    $image = time()."-".toSlug(stripVietnamese($imgs[0])).'.'.$duoi;
+                    $model->image->saveAs(Yii::app()->basePath .'/../'.CATEGOGIES_IMAGE . $image);
+                    $image_thumbai = Yii::app()->image->load(Yii::app()->basePath .'/../'.CATEGOGIES_IMAGE . $image);
+                    $model->image = $image;
+                }
+            }
+			if($model->save()){
+				$this->redirect(array('admin'));
+			}
 		}
 
 		$this->render('create',array(
@@ -111,12 +124,30 @@ class DefaultController extends Controller
 
 		if(isset($_POST['Categories']))
 		{
+			$image_temp = $model->image;
 			$model->attributes=$_POST['Categories'];
-			// $model->parent_id = 0;
 			$model->active = 0;
 			$model->url = toSlug(stripVietnamese($model->title));
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->image=CUploadedFile::getInstance($model,'image');
+			if($model->validate()){
+                if($model->image != null){
+                    $imgs = explode(".", $model->image);
+                	$duoi = $imgs[count($imgs)-1];
+                    $image = time()."-".toSlug(stripVietnamese($imgs[0])).'.'.$duoi;
+                    $model->image->saveAs(Yii::app()->basePath .'/../'.CATEGOGIES_IMAGE . $image);
+                    $image_thumbai = Yii::app()->image->load(Yii::app()->basePath .'/../'.CATEGOGIES_IMAGE . $image);
+                    $model->image = $image;
+                    $temp_image = Yii::app()->basePath .'/../'.CATEGOGIES_IMAGE.$image_temp;
+	                if (file_exists($temp_image) && $image_temp != ''){
+	                    unlink($temp_image);
+	                }
+                }else{
+                    $model->image = $image_temp;
+                }
+            }
+			if($model->save()){
+				$this->redirect(array('admin'));
+			}
 		}
 
 		$this->render('update',array(
