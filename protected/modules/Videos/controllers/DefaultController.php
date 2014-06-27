@@ -49,4 +49,21 @@ class DefaultController extends Controller
             
         }
     }
+    
+    public function actionViewmost(){
+        $criteria = new CDbCriteria;
+        $criteria->order='view DESC';
+                
+        $count=Videos::model()->count($criteria);
+        $pages=new CPagination($count);
+        $pages->pageSize=10;
+        $pages->applyLimit($criteria);
+         
+        $model = Videos::model()->findAll($criteria);
+        if($model === null){
+            throw new CHttpException(404,'The requested page does not exist.');
+        }else{
+            $this->render('viewmost',array('model'=>$model,'pages'=>$pages));
+        }
+    }
 }

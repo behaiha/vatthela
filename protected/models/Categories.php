@@ -89,7 +89,7 @@ class Categories extends CActiveRecord
         Function get URL Categories
     **/
     public function getURL($model){
-        return Yii::app()->createUrl('Articles/Category/viewArticleOfCate',array('id'=>$model->id));
+        return Yii::app()->createUrl('Articles/category/viewArticleOfCate',array('id'=>$model->id,'title'=>$model->url));
     }
     
     /**

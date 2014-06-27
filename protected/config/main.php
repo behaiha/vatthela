@@ -31,16 +31,32 @@ $t = array(
 			'loginUrl'=>array("/Users/default/login"),
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+            'showScriptName' =>false,
 			'rules'=>array(
+				// Core
+				'<controller:\w+>/<action:\w+>/page/<page:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                 //Home
+                'trang-chu'=>array('/Articles/default/index'),
+                'bai-viet/<id:\d+>/<title:[\w-_\.]+>'=>array('/Articles/default/view','urlSuffix'=>'.html'),
+                'the-loai/<id:\d+>/<title:[\w-_\.]+>'=>array('/Articles/category/viewArticleOfCate','urlSuffix'=>'.html'),
+                'tim-kiem'=>array('/Articles/search/search'),
+                'bai-viet-moi-nhat'=>array('/Articles/default/articlesnew','urlSuffix'=>'.html'),
+                'bai-viet-xem-nhieu'=>array('/Articles/default/viewmost','urlSuffix'=>'.html'),
+                
+                'videos/<id:\d+>/<title:[\w-_\.]+>'=>array('/Videos/default/view','urlSuffix'=>'.html'),
+                'videos'=>array('/Videos/default/index','urlSuffix'=>'.html'),
+                'videos-xem-nhieu'=>array('/Videos/default/viewmost','urlSuffix'=>'.html'),
+                
+                
 			),
 		),
-		*/
+	
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),

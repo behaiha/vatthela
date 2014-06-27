@@ -157,7 +157,7 @@ class Articles extends CActiveRecord
     **/
     public function getTitleURL($model){
         if($model != null){
-            return Yii::app()->createUrl('Articles/default/view',array('id'=>$model->id));
+            return Yii::app()->createUrl('Articles/default/view',array('id'=>$model->id,'title'=>$model->url));
         }
     }
     

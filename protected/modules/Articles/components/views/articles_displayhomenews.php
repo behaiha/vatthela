@@ -22,7 +22,8 @@
                                 <?php }?>
                             </h3> 
     						<div class="prl-article-meta">
-    							<i class="fa fa-calendar-o"></i> <?php echo Articles::model()->getDate($row);?>&nbsp;&nbsp;<i class="fa fa-comment-o"></i> 23
+    							<i class="fa fa-calendar-o"></i> <?php echo Articles::model()->getDate($row);?>&nbsp;&nbsp;<i class="fa fa-comment-o"></i> 
+                                <fb:comments-count href="<?php echo Yii::app()->request->hostInfo.Yii::app()->createUrl('Articles/default/view',array('id'=>$row->id));?>"/></fb:comments-count>
     						</div>    
     						<p><?php echo CutString($row->short_description,200);?></p>
     					</article>

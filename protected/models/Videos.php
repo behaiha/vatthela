@@ -121,9 +121,14 @@ class Videos extends CActiveRecord
     
     public function getURL($model){
         if($model != null){
-            return Yii::app()->createUrl('Videos/default/view',array('id'=>$model->id));
+            return Yii::app()->createUrl('Videos/default/view',array('id'=>$model->id,'title'=>$model->url));
         }
     }
+    
+    public function getVideoMost(){
+        return Yii::app()->createUrl('Videos/default/viewmost');
+    }
+    
     public function getDate($model){
         if($model->video_createdate != ''){
             return date('F j, Y, g:i a', strtotime ($model->video_createdate));

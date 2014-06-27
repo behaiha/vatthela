@@ -5,59 +5,32 @@
 	   <div class="prl-grid">
 			<div class="prl-span-9 prl-span-flip">
 				<div class="prl-entry-content">
-                    <b style="color: #e74c3c;"><?php echo $model->video_shortdescription;?></b>
+                    <b style="color: #e74c3c;"><?php echo $model->video_shortdescription;?></b><br /><br />
                     <iframe width="560" height="315"
                         src="http://www.youtube.com/embed/<?php echo $model->video_id;?>">
                     </iframe>
+                    <br />
 					<?php echo $model->video_description;?>
 				</div> <!-- .prl-entry-content -->
+                <?php $this->widget('Videos.components.Comment',array('model'=>$model));?>
 			</div>
 			<div class="prl-span-3 prl-entry-meta">
 				<div class="prl-article-meta">
 					<span><i class="fa fa-calendar-o"></i><?php echo " ".Videos::model()->getDate($model);?></span><br /> 
-					<span><a href="#comment"><i class="fa fa-comment-o"></i> 23</a></span>
+					<span>
+                        <a href="#comment">
+                            <i class="fa fa-comment-o"></i> 
+                            <fb:comments-count href="<?php echo Yii::app()->request->hostInfo.Yii::app()->createUrl('Videos/default/view',array('id'=>$model->id));?>"/></fb:comments-count>
+                        </a>
+                    </span>
 					<i class="fa fa-eye"></i> <?php echo $model->view;?>
 				</div>
 				<hr class="prl-article-divider">		
-                <p class="rating-head">Editor review</p>
-                <p class="prl-post-rating ">
-                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                </p>
-                <p>Excellent: 10/10</p>
-                <strong>Design</strong>
-                <div class="prl-progress prl-progress-mini">
-                <div class="prl-progress-bar" style="width: 40%;"></div>
-                </div>
-                
-                <strong>Touch screen</strong>
-                <div class="prl-progress prl-progress-mini">
-                <div class="prl-progress-bar" style="width: 70%;"></div>
-                </div>
-                <strong>Battery</strong>
-                <div class="prl-progress prl-progress-mini">
-                <div class="prl-progress-bar" style="width: 40%;"></div>
-                </div>
-                
-                <strong>Applications</strong>
-                <div class="prl-progress prl-progress-mini">
-                <div class="prl-progress-bar" style="width: 70%;"></div>
-                </div>
-                <hr class="prl-article-divider">
-                <p class="rating-head">User rating: 3.76 (440)</p>
-                <p class="prl-post-rating prl-user-rating">
-                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i>
-                </p>						
-				<hr class="prl-article-divider">
 				
 				<ul class="prl-list prl-list-sharing">
-					<li class="header">SHARING</li>
-					<li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-					<li><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-					<li><a href="#"><i class="fa fa-google-plus-square"></i> Google plus</a></li>
-					<li><a href="#"><i class="fa fa-pinterest-square"></i> Pinterest</a></li>
-					<li><a href="#"><i class="fa fa-linkedin-square"></i> Linkedin</a></li>
-					<li><a href="#"><i class="fa fa-envelope"></i> Mail this article</a></li>
-					<li><a href="#" onclick="window.print();" id="print-page"><i class="fa fa-print"></i> Print this article</a></li>
+			     <!--Share-->
+                <?php $this->widget('Videos.components.Share',array('model'=>$model));?>
+                <!--End share-->
 				</ul>
 				
 				<hr class="prl-article-divider">
