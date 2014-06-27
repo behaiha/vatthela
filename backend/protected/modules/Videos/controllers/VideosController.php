@@ -72,7 +72,7 @@ class VideosController extends Controller
 			$model->attributes=$_POST['Videos'];
             $model->video_id=get_youtube_id_from_url($_POST['Videos']['video_id']);
             $model->video_image = "http://img.youtube.com/vi/".$model->video_id."/hqdefault.jpg";
-            
+           	$model->url = toSlug(stripVietnamese($model->video_title));
             $model->video_description = $_POST['Videos']['video_description'];
             $model->hot = $_POST['Videos']['hot'];
             $model->active = $_POST['Videos']['active'];
@@ -102,6 +102,7 @@ class VideosController extends Controller
 		{
             $update_video_id = get_youtube_id_from_url($_POST['Videos']['video_id']);
 			$model->attributes=$_POST['Videos'];
+  	         $model->url = toSlug(stripVietnamese($model->video_title));
             if($update_video_id == '' || $update_video_id == null){
                 $model->video_id = $video_id;
             }else{

@@ -1,0 +1,1 @@
+<div class="fb-comments" data-href="<?php echo Yii::app()->request->hostInfo.Yii::app()->createUrl('Videos/default/view',array('id'=>$model->id));?>" data-numposts="10" data-colorscheme="light"></div>
