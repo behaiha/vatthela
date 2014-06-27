@@ -551,3 +551,115 @@ Stack trace:
 REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
 HTTP_REFERER=http://localhost/vatthela.com/vatthela/videos-xem-nhieu.html
 ---
+2014/06/27 15:35:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/bai-viet/1/bi-an-so-dien-thoai-ma-am.html
+---
+2014/06/27 15:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/videos/8/lien-khuc-nhac-thap-nien-80.html
+---
+2014/06/27 15:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/
+---
+2014/06/27 15:43:12 [error] [php] Undefined variable: model (C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\components\views\articles_onepost.php:17)
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\widgets\CWidget.php(244): Articles_OnePost->renderFile()
+#1 C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\components\Articles_OnePost.php(5): Articles_OnePost->render()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(147): Articles_OnePost->init()
+#3 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(172): Articles_News->createWidget()
+#4 C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\components\views\articles_news.php(10): Articles_News->widget()
+#5 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(130): require()
+#6 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(95): Articles_News->renderInternal()
+#7 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\widgets\CWidget.php(244): Articles_News->renderFile()
+#8 C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\components\Articles_News.php(8): Articles_News->render()
+#9 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(147): Articles_News->init()
+#10 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(172): DefaultController->createWidget()
+#11 C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\views\default\index.php(4): DefaultController->widget()
+#12 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(126): require()
+#13 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#14 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(869): DefaultController->renderFile()
+#15 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(782): DefaultController->renderPartial()
+#16 C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\controllers\DefaultController.php(13): DefaultController->render()
+#17 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#18 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(308): CInlineAction->runWithParams()
+#19 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(286): DefaultController->runAction()
+#20 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#21 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(282): DefaultController->run()
+#22 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CWebApplication->run()
+REQUEST_URI=/vatthela.com/vatthela/
+in C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\components\views\articles_onepost.php (17)
+in C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\components\Articles_OnePost.php (5)
+in C:\xampp\htdocs\vatthela.com\vatthela\protected\modules\Articles\components\views\articles_news.php (10)
+2014/06/27 15:44:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/
+---
+2014/06/27 15:45:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/
+---
+2014/06/27 15:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/
+---
+2014/06/27 15:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/videos-xem-nhieu.html
+---
+2014/06/27 15:46:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/bai-viet-xem-nhieu.html
+---
+2014/06/27 15:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/classic/assets/images/patterns/brushed_alu.png".' in C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\vatthela.com\vatthela\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/classic/...')
+#1 C:\xampp\htdocs\vatthela.com\vatthela\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\vatthela.com\vatthela\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vatthela.com/vatthela/themes/classic/assets/images/patterns/brushed_alu.png
+HTTP_REFERER=http://localhost/vatthela.com/vatthela/
+---
