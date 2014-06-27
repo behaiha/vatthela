@@ -164,6 +164,9 @@ class Articles extends CActiveRecord
     public function getArticlenewURL(){
         return Yii::app()->createUrl('Articles/default/articlesnew');
     }
+    public function getHomeURL(){
+        return Yii::app()->createUrl('Articles/default/index');
+    }
     
      public function getViewMostURL(){
         return Yii::app()->createUrl('Articles/default/viewmost');

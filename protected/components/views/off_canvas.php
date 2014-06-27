@@ -7,7 +7,7 @@
                         <?php if($row->childrens != null): ?>
                             <ul class="nav-submenu">
                                 <?php foreach($row->childrens as $row_children_cate):?>
-                                <li class="nav-submenu-item"><a href="<?php MenuRelation::getLink($row);?>"><?php echo $row_children_cate->text;?></a></li>
+                                <li class="nav-submenu-item"><a href="<?php MenuRelation::getLink($row_children_cate);?>"><?php echo $row_children_cate->text;?></a></li>
                                 <?php endforeach;?>
                             </ul>
                         <?php endif; ?>

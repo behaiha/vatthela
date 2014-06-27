@@ -10,6 +10,19 @@ class DefaultController extends Controller
         if($model === null){
             throw new CHttpException(404,'The requested page does not exist.');
         }else{
+            $modelTitle = Config::model()->findByAttributes(array('name'=>"TitleHome"));
+            $modelDesc = Config::model()->findByAttributes(array('name'=>"DescriptionHome"));
+            $seo_title = $modelTitle->value;
+            $seo_description =$modelDesc->value;
+            if ($modelDesc == null && $modelTitle == null) {
+                throw new CHttpException(404,'The requested page does not exist.');  
+            }
+            if ($seo_title == '') {
+                if (strlen($seo_title) > 70) {
+                    $seo_title = CutString($seo_title,70);
+                }
+            }
+            $this->setPageSeo($seo_title,$seo_description);
             $this->render('index',array('model'=>$model));
         }
 	}

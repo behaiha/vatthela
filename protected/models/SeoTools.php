@@ -1,22 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "config".
+ * This is the model class for table "seo_tools".
  *
- * The followings are the available columns in table 'config':
- * @property integer $id
- * @property string $name
- * @property string $value
- * @property integer $status
+ * The followings are the available columns in table 'seo_tools':
+ * @property string $id
+ * @property string $title
+ * @property string $description
+ * @property string $keywords
+ * @property string $metarobot
+ * @property string $type
+ * @property string $status
+ * @property string $create_date
  */
-class Config extends CActiveRecord
+class SeoTools extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'config';
+		return 'seo_tools';
 	}
 
 	/**
@@ -27,14 +31,17 @@ class Config extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'unique'),
-			array('status', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>30),
-			array('value', 'length', 'max'=>300),
+			array('title,description,keywords', 'required'),
+			array('title', 'length', 'max'=>128),
+			array('description', 'length', 'max'=>160),
+			array('title', 'length', 'max'=>160),
+			array('keywords', 'length', 'max'=>500),
+			array('metarobot', 'length', 'max'=>50),
+			array('type', 'length', 'max'=>20),
+			array('status', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, value, status', 'safe', 'on'=>'search'),
+			array('id, title, description, keywords, metarobot, type, status, create_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,16 +55,7 @@ class Config extends CActiveRecord
 		return array(
 		);
 	}
-	public static function getLogo()
-	{
-		$str = '<div class="prl-header-logo"><a href=""><img src="'.Yii::app()->theme->baseUrl.'/assets/images/logo.png" alt="Original" /></a></div>';
-		$model = Config::model()->findByAttributes(array('name'=>"Logo"));
-		$title = Config::model()->findByAttributes(array('name'=>"TitlePage"));
-		if ($model != null && $title != null) {
-			$str = '<div class="prl-header-logo"><a href="'.Articles::model()->getHomeURL().'"><img src="'.Yii::app()->request->baseUrl.LOGO.$model->value.'" alt="'.$title->value.'" /></a></div>';
-		}
-		echo $str;
-	}
+
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
@@ -65,9 +63,13 @@ class Config extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'value' => 'Value',
+			'title' => 'Title',
+			'description' => 'Description',
+			'keywords' => 'Keywords',
+			'metarobot' => 'Metarobot',
+			'type' => 'Type',
 			'status' => 'Status',
+			'create_date' => 'Create Date',
 		);
 	}
 
@@ -88,11 +90,15 @@ class Config extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('value',$this->value,true);
-		$criteria->compare('status',$this->status);
+		$criteria->order = "id desc";
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('title',$this->title,true);
+		$criteria->compare('description',$this->description,true);
+		$criteria->compare('keywords',$this->keywords,true);
+		$criteria->compare('metarobot',$this->metarobot,true);
+		$criteria->compare('type',$this->type,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('create_date',$this->create_date,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -103,7 +109,7 @@ class Config extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Config the static model class
+	 * @return SeoTools the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

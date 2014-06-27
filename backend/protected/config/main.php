@@ -21,6 +21,7 @@ $t = array(
         'Articles',
         'Slide',
         'Services',
+        'Seo',
         'Menu', 
         'Videos',
         'Config',

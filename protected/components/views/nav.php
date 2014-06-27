@@ -7,23 +7,12 @@
 						<?php if($row->childrens != null): ?>
 							<ul class="sf-list">
 		                		<?php foreach($row->childrens as $row_children_cate):?>
-		                		<li><a href="<?php MenuRelation::getLink($row);?>"><?php echo $row_children_cate->text;?></a></li>
+		                		<li><a href="<?php MenuRelation::getLink($row_children_cate);?>"><?php echo $row_children_cate->text;?></a></li>
 		                		<?php endforeach;?>
 		                	</ul>
 						<?php endif; ?>
                     </li>
-                <?php endforeach;?>	                
-                <?php /*
-                <li class="sf-mega-parent"><a href="index.php"><i class="fa fa-flag"></i>Tin nhanh</a>
-					<div class="sf-mega">
-						<div class="prl-grid prl-grid-divider">
-							<?php foreach($model_news as $news):?>
-                                <?php $this->widget('Articles.components.Tinnhanh_OnePost',array('value'=>$news));?>
-                            <?php endforeach;?>
-						</div>	
-					</div>
-				</li>
-                */ ?>
+                <?php endforeach;?>	
 			</ul>
 
 			<a href="#" class="prl-nav-toggle prl-nav-menu" title="Nav" data-prl-offcanvas="{target:'#offcanvas'}"></a>

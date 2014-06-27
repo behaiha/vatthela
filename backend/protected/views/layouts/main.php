@@ -39,6 +39,7 @@
                 array('label'=>'Tags', 'url'=>array('/Tags/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Menu', 'url'=>array('/Menu/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Cấu hình', 'url'=>array('/Config/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Seo', 'url'=>array('/Seo/default/admin'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Đổi mật khẩu', 'url'=>array('/Users/users/changepass'),'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 			),
